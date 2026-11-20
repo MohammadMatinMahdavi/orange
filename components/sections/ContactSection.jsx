@@ -1,8 +1,22 @@
+"use client";
+
+import { useState } from "react";
+
+const services = [
+  { name: "AI Content", code: "01", detail: "Visuals, concepts & campaigns", icon: "✳" },
+  { name: "Real Ads", code: "02", detail: "Performance-led creative", icon: "↗" },
+  { name: "UGC Studio", code: "03", detail: "Creator-style content", icon: "◉" },
+  { name: "Web Design", code: "04", detail: "Digital experiences", icon: "⌘" },
+  { name: "Something else", code: "05", detail: "A little different", icon: "＋" },
+];
+
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
 export default function ContactSection() {
+  const [selectedService, setSelectedService] = useState("");
+
   return (
     <section className="contact-section relative isolate overflow-hidden" id="contact">
       <div className="contact-glow" />
@@ -23,7 +37,30 @@ export default function ContactSection() {
           </div>
           <label>Your name<input name="name" placeholder="How should we call you?" required /></label>
           <label>Email address<input name="email" type="email" placeholder="you@company.com" required /></label>
-          <label>What do you need?<select name="service" defaultValue=""><option value="" disabled>Select a service</option><option>AI Content</option><option>Real Ads</option><option>UGC Studio</option><option>Web Design</option><option>Something else</option></select></label>
+
+          <fieldset className="service-picker">
+            <legend>What do you need?</legend>
+            <div className="service-picker-grid">
+              {services.map((service) => (
+                <label className={`service-choice ${selectedService === service.name ? "is-selected" : ""}`} key={service.code}>
+                  <input
+                    type="radio"
+                    name="service"
+                    value={service.name}
+                    checked={selectedService === service.name}
+                    onChange={() => setSelectedService(service.name)}
+                    required
+                  />
+                  <span className="service-choice-icon" aria-hidden="true">{service.icon}</span>
+                  <span className="service-choice-copy"><b>{service.name}</b><small>{service.detail}</small></span>
+                  <span className="service-choice-check" aria-hidden="true">✓</span>
+                  <span className="service-choice-code">{service.code}</span>
+                </label>
+              ))}
+            </div>
+            <span className="service-picker-hint">{selectedService ? `SELECTED · ${selectedService.toUpperCase()}` : "CHOOSE THE SERVICE THAT FITS YOUR IDEA"}</span>
+          </fieldset>
+
           <label>Tell us a little about it<textarea name="message" rows="3" placeholder="A few words about your project..." /></label>
           <button className="button button-primary form-submit group w-full justify-between rounded-lg shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-1 hover:shadow-orange-500/30" type="submit">Send your inquiry <Arrow /></button>
           <span className="form-note">By sending this, you’re taking the first step. We’ll take it from here.</span>
