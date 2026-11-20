@@ -16,10 +16,6 @@ export default function HeroSection() {
         <span className="art-side-label">IDEAS IN MOTION / ORANGE AI</span>
       </div>
       <div className="hero-foot">
-        <a className="hero-scroll-cue" href="#services" aria-label="Scroll to explore">
-          <span className="hero-scroll-icon"><i /></span>
-          <span><b>SCROLL TO EXPLORE</b><small>THE GOOD STUFF IS BELOW</small></span>
-        </a>
         <span className="hero-foot-location"><i /> INDEPENDENT CREATIVE STUDIO <b>·</b> WORKING WORLDWIDE</span>
         <span className="hero-foot-index">01 <em>/</em> 07</span>
       </div>
