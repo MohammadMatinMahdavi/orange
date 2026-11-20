@@ -26,8 +26,8 @@ export default function SiteHeader() {
 
   return (
     <header className={`site-header sticky top-0 z-50 w-full transition-all duration-300 ${scrolled ? "site-header-scrolled" : ""}`}>
-      <div className="header-inner mx-auto flex h-full max-w-[1440px] items-center justify-between px-[7.2%]">
-        <a className="brand shrink-0" href="#" aria-label="Orange AI home">
+      <div className="header-inner mx-auto grid h-full max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-[5.5%]">
+        <a className="brand brand-home shrink-0" href="#" aria-label="Orange AI home">
           <span className="brand-mark">o<span>.</span></span>
           <span>orange<span className="brand-light">ai</span></span>
         </a>
@@ -42,14 +42,14 @@ export default function SiteHeader() {
           <span /><span />
         </button>
 
-        <nav id="primary-navigation" className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
+        <nav id="primary-navigation" className={`nav-links nav-center ${menuOpen ? "nav-open" : ""}`}>
           {links.map(([label, href]) => (
             <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
           ))}
           <a className="mobile-nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Start a project <Arrow /></a>
         </nav>
 
-        <a className="nav-cta inline-flex items-center gap-3 rounded-full transition-all duration-300" href="#contact">
+        <a className="nav-cta nav-cta-right inline-flex items-center justify-self-end gap-3 rounded-full transition-all duration-300" href="#contact">
           Let’s talk <Arrow />
         </a>
       </div>
