@@ -6,42 +6,78 @@ export default function InteractionEffects() {
   useEffect(() => {
     const root = document.documentElement;
     let frame = 0;
+    let targets = [];
+
+    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
     const updateScrollAtmosphere = () => {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         const y = window.scrollY;
-        // Warm up through the upper page, then gently return to the dark base.
-        const fadeIn = Math.min(1, Math.max(0, (y - 260) / 520));
-        const fadeOut = Math.min(1, Math.max(0, (y - 1120) / 620));
-        const intensity = Math.max(0, fadeIn * (1 - fadeOut));
-        root.style.setProperty("--scroll-orange", intensity.toFixed(3));
+
+        // First warm section near the top of the page.
+        const firstIn = clamp((y - 260) / 520, 0, 1);
+        const firstOut = clamp((y - 1120) / 620, 0, 1);
+        const firstBand = firstIn * (1 - firstOut);
+
+        // A second, separate orange passage further down the page.
+        const secondIn = clamp((y - 2550) / 520, 0, 1);
+        const secondOut = clamp((y - 3450) / 620, 0, 1);
+        const secondBand = secondIn * (1 - secondOut);
+
+        root.style.setProperty("--scroll-orange", Math.max(firstBand, secondBand).toFixed(3));
       });
     };
 
-    const updatePointer = (event) => {
-      root.style.setProperty("--pointer-x", `${event.clientX}px`);
-      root.style.setProperty("--pointer-y", `${event.clientY}px`);
-      root.classList.add("has-pointer");
+    const resetTarget = (element) => {
+      element.style.translate = "";
+      element.style.rotate = "";
+      element.classList.remove("is-magnetic-active");
     };
-    const clearPointer = () => root.classList.remove("has-pointer");
+
+    const handlePointerMove = (event) => {
+      const element = event.currentTarget;
+      const rect = element.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width;
+      const y = (event.clientY - rect.top) / rect.height;
+      const dx = (x - 0.5) * 2;
+      const dy = (y - 0.5) * 2;
+      const strength = element.matches(".magnetic-strong") ? 7 : 3.5;
+
+      element.style.translate = `${(dx * strength).toFixed(2)}px ${(dy * strength).toFixed(2)}px`;
+      element.style.rotate = `${(-dy * 1.8).toFixed(2)}deg ${(dx * 1.8).toFixed(2)}deg 0deg`;
+      element.style.setProperty("--magnetic-x", `${(x * 100).toFixed(1)}%`);
+      element.style.setProperty("--magnetic-y", `${(y * 100).toFixed(1)}%`);
+      element.classList.add("is-magnetic-active");
+    };
+
+    const attachMagneticTargets = () => {
+      targets = Array.from(document.querySelectorAll(
+        ".button, .nav-cta, .service-card, .project-peel, .process-item"
+      ));
+      targets.forEach((element) => {
+        element.addEventListener("pointermove", handlePointerMove);
+        element.addEventListener("pointerleave", () => resetTarget(element));
+        element.addEventListener("pointercancel", () => resetTarget(element));
+      });
+    };
 
     updateScrollAtmosphere();
+    attachMagneticTargets();
     window.addEventListener("scroll", updateScrollAtmosphere, { passive: true });
     window.addEventListener("resize", updateScrollAtmosphere);
-    window.addEventListener("pointermove", updatePointer, { passive: true });
-    window.addEventListener("pointerleave", clearPointer);
 
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", updateScrollAtmosphere);
       window.removeEventListener("resize", updateScrollAtmosphere);
-      window.removeEventListener("pointermove", updatePointer);
-      window.removeEventListener("pointerleave", clearPointer);
+      targets.forEach((element) => {
+        element.removeEventListener("pointermove", handlePointerMove);
+        resetTarget(element);
+      });
       root.style.removeProperty("--scroll-orange");
-      root.classList.remove("has-pointer");
     };
   }, []);
 
-  return <div className="cursor-wave" aria-hidden="true" />;
+  return null;
 }
