@@ -19,7 +19,23 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-body { margin: 0; background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+body { position: relative; isolation: isolate; margin: 0; background: transparent; color: var(--foreground); font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+html { background: var(--background); }
+
+/* A fixed atmospheric layer reads --scroll-orange from InteractionEffects. */
+body::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--scroll-orange, 0);
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(255, 91, 31, .42), transparent 72%),
+    linear-gradient(112deg, rgba(255, 83, 27, .20), rgba(255, 116, 54, .25) 48%, rgba(188, 49, 12, .19));
+  transition: opacity .2s linear;
+}
+@media (prefers-reduced-motion: reduce) { body::before { transition: none; } }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
 ::selection { background: var(--orange); color: #090909; }
