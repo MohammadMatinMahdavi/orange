@@ -1378,3 +1378,69 @@ body::before {
   background: transparent;
   box-shadow: none;
 }
+
+
+/* Refined hero metadata strip and a more generous project inquiry experience. */
+.hero-foot {
+  grid-template-columns: 1fr auto;
+  min-height: 56px;
+  margin-top: 17px;
+}
+.hero-foot-location { justify-self: start; }
+.hero-foot-index { justify-self: end; }
+
+.contact-layout {
+  grid-template-columns: .82fr 1fr;
+  gap: clamp(42px, 7vw, 100px);
+  max-width: 1280px;
+}
+.contact-form {
+  padding: clamp(30px, 3.4vw, 48px);
+  gap: 25px;
+  border-radius: 26px;
+}
+.form-card-heading { padding-bottom: 12px; }
+.form-card-heading h3 { font-size: clamp(28px, 3vw, 36px); }
+.service-picker legend {
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+.service-picker-grid { gap: 12px; }
+.contact-form .service-choice {
+  min-height: 88px;
+  gap: 14px;
+  padding: 15px 34px 15px 15px;
+  border-radius: 15px;
+}
+.service-choice-icon {
+  flex-basis: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 19px;
+}
+.service-choice-copy b { font-size: 12px; }
+.service-choice-copy small { margin-top: 6px; font-size: 9px; }
+.service-choice-code { right: 12px; bottom: 10px; font-size: 8px; }
+.service-choice-check { top: 10px; right: 12px; font-size: 12px; }
+.service-picker-hint { margin-top: 13px; font-size: 8px; }
+.contact-form label { font-size: 11px; }
+.contact-form input,
+.contact-form textarea { padding: 15px 16px; font-size: 13px; }
+.contact-form textarea { min-height: 116px; }
+.contact-form .form-submit { padding: 19px 22px; }
+
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr 1fr; gap: 5%; }
+  .contact-form { padding: 26px; }
+  .service-picker-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .hero-foot { grid-template-columns: 1fr auto; }
+  .hero-foot-location { grid-column: 1; grid-row: 1; font-size: 6px; }
+  .hero-foot-index { grid-column: 2; grid-row: 1; }
+  .contact-layout { grid-template-columns: 1fr; gap: 42px; }
+  .contact-form { padding: 24px 19px; gap: 21px; }
+  .service-picker-grid { grid-template-columns: 1fr; gap: 9px; }
+  .contact-form .service-choice { min-height: 76px; }
+}
