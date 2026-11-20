@@ -68,9 +68,9 @@ export default function PortfolioSection({ projects }) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("is-visible");
-            requestAnimationFrame(() => {
-              requestAnimationFrame(() => entry.target.classList.add("is-visible"));
-            });
+            // Force a style recalculation so the CSS transition restarts on every re-entry.
+            void entry.target.offsetWidth;
+            entry.target.classList.add("is-visible");
           } else {
             entry.target.classList.remove("is-visible");
           }
