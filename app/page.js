@@ -13,6 +13,7 @@ import ProcessSection from "@/components/sections/ProcessSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import FaqSection from "@/components/sections/FaqSection";
 import FooterSection from "@/components/layout/FooterSection";
+import InteractionEffects from "@/components/ui/InteractionEffects";
 
 const services = [
   { number: "01", title: "AI Content", tag: "CONTENT THAT CONVERTS", description: "Scroll-stopping visuals, product films and campaign assets made with the speed of AI and the eye of a creative studio.", items: ["AI product photography", "Social-first video", "Creative campaign assets"], icon: "✳" },
@@ -47,6 +48,7 @@ export default function Home() {
 
   return (
     <main>
+      <InteractionEffects />
       <AnnouncementBar />
       <SiteHeader />
 
