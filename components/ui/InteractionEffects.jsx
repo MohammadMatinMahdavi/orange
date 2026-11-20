@@ -45,11 +45,13 @@ export default function InteractionEffects() {
       const strength = element.matches(".magnetic-strong") ? 7 : 3.5;
 
       element.style.translate = `${(dx * strength).toFixed(2)}px ${(dy * strength).toFixed(2)}px`;
-      element.style.rotate = `${(-dy * 1.8).toFixed(2)}deg ${(dx * 1.8).toFixed(2)}deg 0deg`;
+      element.style.rotate = `${(-dy).toFixed(2)} ${dx.toFixed(2)} 0 1deg`;
       element.style.setProperty("--magnetic-x", `${(x * 100).toFixed(1)}%`);
       element.style.setProperty("--magnetic-y", `${(y * 100).toFixed(1)}%`);
       element.classList.add("is-magnetic-active");
     };
+
+    const handlePointerLeave = (event) => resetTarget(event.currentTarget);
 
     const attachMagneticTargets = () => {
       targets = Array.from(document.querySelectorAll(
@@ -57,8 +59,8 @@ export default function InteractionEffects() {
       ));
       targets.forEach((element) => {
         element.addEventListener("pointermove", handlePointerMove);
-        element.addEventListener("pointerleave", () => resetTarget(element));
-        element.addEventListener("pointercancel", () => resetTarget(element));
+        element.addEventListener("pointerleave", handlePointerLeave);
+        element.addEventListener("pointercancel", handlePointerLeave);
       });
     };
 
@@ -73,6 +75,8 @@ export default function InteractionEffects() {
       window.removeEventListener("resize", updateScrollAtmosphere);
       targets.forEach((element) => {
         element.removeEventListener("pointermove", handlePointerMove);
+        element.removeEventListener("pointerleave", handlePointerLeave);
+        element.removeEventListener("pointercancel", handlePointerLeave);
         resetTarget(element);
       });
       root.style.removeProperty("--scroll-orange");
