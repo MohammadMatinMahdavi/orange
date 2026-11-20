@@ -1,3 +1,5 @@
+import Arrow from "@/components/ui/Arrow";
+
 export default function ProcessSection({ steps }) {
   return (
     <section className="section process-section" id="process">
