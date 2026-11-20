@@ -1444,3 +1444,95 @@ body::before {
   .service-picker-grid { grid-template-columns: 1fr; gap: 9px; }
   .contact-form .service-choice { min-height: 76px; }
 }
+
+
+/* Compact the inquiry card while keeping its custom service selector generous. */
+.contact-layout {
+  grid-template-columns: .9fr .95fr;
+  gap: clamp(38px, 6vw, 78px);
+}
+.contact-form {
+  padding: clamp(25px, 2.6vw, 36px);
+  gap: 19px;
+  border-radius: 23px;
+}
+.form-card-heading h3 { font-size: clamp(25px, 2.5vw, 31px); }
+.form-spark { width: 38px; height: 38px; }
+.contact-form .service-choice {
+  min-height: 76px;
+  padding: 12px 31px 12px 13px;
+}
+.service-choice-icon {
+  flex-basis: 36px;
+  width: 36px;
+  height: 36px;
+  font-size: 17px;
+}
+.service-choice-copy b { font-size: 11px; }
+.service-choice-copy small { font-size: 8px; }
+.contact-form input,
+.contact-form textarea { padding: 12px 14px; }
+.contact-form textarea { min-height: 98px; }
+.contact-form .form-submit { padding: 17px 20px; }
+
+.inquiry-progress {
+  padding: 13px 15px 11px;
+  border: 1px solid rgba(255,151,104,.16);
+  border-radius: 13px;
+  background: linear-gradient(110deg, rgba(255,106,43,.075), rgba(255,255,255,.018));
+}
+.inquiry-progress-meta,
+.inquiry-progress-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.inquiry-progress-meta {
+  color: #a99a8f;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+.inquiry-progress-meta b {
+  color: #ff9b6d;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+.inquiry-progress-track {
+  height: 5px;
+  margin: 11px 0 9px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255,255,255,.09);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.35);
+}
+.inquiry-progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #d94b1b, #ff7138 65%, #ffc09a);
+  box-shadow: 0 0 13px rgba(255,106,43,.55);
+  transition: width .45s cubic-bezier(.2,.75,.2,1);
+}
+.inquiry-progress-steps span {
+  color: #655b54;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  transition: color .2s ease;
+}
+.inquiry-progress-steps span.is-complete { color: #ffad83; }
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr 1fr; gap: 4%; }
+  .contact-form { padding: 23px; }
+}
+@media (max-width: 640px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 38px; }
+  .contact-form { padding: 22px 18px; gap: 18px; }
+  .contact-form .service-choice { min-height: 70px; }
+  .inquiry-progress-steps span { font-size: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .inquiry-progress-track span { transition: none; }
+}
