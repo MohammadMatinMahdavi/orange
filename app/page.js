@@ -1,6 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import AnnouncementBar from "@/components/layout/AnnouncementBar";
+import SiteHeader from "@/components/layout/SiteHeader";
+import ServicesTicker from "@/components/sections/ServicesTicker";
+import ContactSection from "@/components/sections/ContactSection";
 
 const services = [
   { number: "01", title: "AI Content", tag: "CONTENT THAT CONVERTS", description: "Scroll-stopping visuals, product films and campaign assets made with the speed of AI and the eye of a creative studio.", items: ["AI product photography", "Social-first video", "Creative campaign assets"], icon: "✳" },
@@ -35,23 +39,12 @@ function Arrow({ diagonal = false }) {
 }
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
 
   return (
     <main>
-      <div className="announcement"><span className="status-dot" /> INDEPENDENT CREATIVE STUDIO <span className="announcement-divider">/</span> HUMAN IDEAS. AI POSSIBILITY.</div>
-      <header className="site-header">
-        <a className="brand" href="#" aria-label="Orange AI home"><span className="brand-mark">o<span>.</span></span><span>orange<span className="brand-light">ai</span></span></a>
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}><span /><span /></button>
-        <nav className={menuOpen ? "nav-links nav-open" : "nav-links"}>
-          <a href="#services" onClick={() => setMenuOpen(false)}>What we do</a>
-          <a href="#work" onClick={() => setMenuOpen(false)}>Selected work</a>
-          <a href="#process" onClick={() => setMenuOpen(false)}>Our process</a>
-          <a href="#faq" onClick={() => setMenuOpen(false)}>FAQs</a>
-        </nav>
-        <a className="nav-cta" href="#contact">Let’s talk <Arrow diagonal /></a>
-      </header>
+      <AnnouncementBar />
+      <SiteHeader />
 
       <section className="hero">
         <div className="hero-glow" />
@@ -69,7 +62,7 @@ export default function Home() {
         <div className="hero-foot"><span>SCROLL TO EXPLORE</span><span className="scroll-line" /><span>BASED EVERYWHERE · WORKING WORLDWIDE</span></div>
       </section>
 
-      <section className="ticker" aria-label="Our capabilities"><div className="ticker-track">{Array.from({ length: 2 }).map((_, i) => <span key={i}>AI CONTENT <b>✳</b> REAL ADS <b>✳</b> UGC STUDIO <b>✳</b> WEB DESIGN <b>✳</b> CREATIVE DIRECTION <b>✳</b></span>)}</div></section>
+      <ServicesTicker />
 
       <section className="section services-section" id="services">
         <div className="section-heading"><div><div className="eyebrow"><span>01</span> / WHAT WE DO</div><h2>Good ideas.<br /><span className="muted">Better execution.</span></h2></div><p className="section-intro">One creative partner for the content and digital presence your brand needs to stand out.</p></div>
@@ -107,11 +100,7 @@ export default function Home() {
         <div className="faq-list">{faqs.map(([question, answer], index) => <article className={openFaq === index ? "faq-item faq-active" : "faq-item"} key={question}><button onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span className="faq-number">0{index + 1}</span><span>{question}</span><span className="faq-toggle">{openFaq === index ? "−" : "+"}</span></button>{openFaq === index && <p>{answer}</p>}</article>)}</div>
       </section>
 
-      <section className="contact-section" id="contact">
-        <div className="contact-glow" />
-        <div className="eyebrow"><span>07</span> / YOUR NEXT MOVE</div>
-        <div className="contact-layout"><div><h2>Have a good<br />feeling about <span>this?</span></h2><p className="contact-copy">Tell us what you’re dreaming up. We’ll bring the creative thinking, the tools and a plan to make it happen.</p><a className="contact-email" href="mailto:hello@orangeai.studio">hello@orangeai.studio <Arrow diagonal /></a></div><form className="contact-form" action="mailto:hello@orangeai.studio" method="post" encType="text/plain"><label>Your name<input name="name" placeholder="How should we call you?" required /></label><label>Email address<input name="email" type="email" placeholder="you@company.com" required /></label><label>What do you need?<select name="service" defaultValue=""><option value="" disabled>Select a service</option><option>AI Content</option><option>Real Ads</option><option>UGC Studio</option><option>Web Design</option><option>Something else</option></select></label><label>Tell us a little about it<textarea name="message" rows="3" placeholder="A few words about your project..." /></label><button className="button button-primary form-submit" type="submit">Send your inquiry <Arrow diagonal /></button><span className="form-note">By sending this, you’re taking the first step. We’ll take it from here.</span></form></div>
-      </section>
+      <ContactSection />
 
       <footer className="footer"><div className="footer-main"><a className="brand footer-brand" href="#"><span className="brand-mark">o<span>.</span></span><span>orange<span className="brand-light">ai</span></span></a><p>Ideas with an edge.<br />Made for what’s next.</p><a className="back-top" href="#">BACK TO TOP ↑</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} ORANGE AI STUDIO. ALL RIGHTS RESERVED.</span><span>INDEPENDENT BY NATURE. CREATIVE BY DESIGN.</span><a href="mailto:hello@orangeai.studio">SAY HELLO ↗</a></div></footer>
     </main>
