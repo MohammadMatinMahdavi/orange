@@ -1010,3 +1010,103 @@ button, input, select, textarea { font: inherit; }
   .project-sound-toggle { right: 13px; bottom: 13px; min-height: 32px; }
 }
 @media (prefers-reduced-motion: reduce) { .project-sound-toggle { transition: none; } }
+
+
+/* Cursor-led micro-interactions and scroll atmosphere */
+:root {
+  --scroll-orange: 0;
+  --pointer-x: 50vw;
+  --pointer-y: 50vh;
+}
+body {
+  position: relative;
+  isolation: isolate;
+  background: #090909;
+}
+body::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(255,106,43,.72), rgba(232,75,22,.28) 48%, rgba(160,42,12,.12) 78%),
+    #ff6a2b;
+  opacity: var(--scroll-orange);
+  transition: opacity .22s linear;
+  will-change: opacity;
+}
+.cursor-wave {
+  position: fixed;
+  z-index: 50;
+  left: var(--pointer-x);
+  top: var(--pointer-y);
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.72);
+  background: radial-gradient(circle, rgba(255,143,91,.11) 0 2%, transparent 3% 18%, rgba(255,143,91,.08) 18.5% 19%, transparent 19.5% 34%, rgba(255,143,91,.055) 34.5% 35%, transparent 35.5% 100%);
+  transition: opacity .28s ease, transform .45s cubic-bezier(.2,.7,.2,1);
+  mix-blend-mode: screen;
+}
+.has-pointer .cursor-wave {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.service-card,
+.project-peel,
+.hero-art,
+.process-item,
+.nav-cta,
+.button {
+  --hover-lift: 0px;
+  transform-style: preserve-3d;
+}
+.service-card,
+.project-peel,
+.hero-art {
+  transition: transform .45s cubic-bezier(.2,.75,.2,1), box-shadow .45s ease, background-color .45s ease;
+}
+.service-card:hover {
+  transform: translate3d(0,-7px,0);
+}
+.project-card:hover .project-peel {
+  transform: translate3d(0,-7px,0) rotate(-.5deg);
+}
+.hero-art:hover .art-core {
+  animation: orange-orbit-pulse 2.4s ease-in-out infinite;
+}
+.hero-art:hover .art-orbit {
+  animation: orange-orbit-drift 5s ease-in-out infinite alternate;
+}
+.hero-art:hover .orbit-two {
+  animation-delay: -.8s;
+}
+.service-icon {
+  transition: transform .5s cubic-bezier(.2,.8,.2,1), filter .5s ease;
+}
+.service-card:hover .service-icon {
+  transform: translate3d(3px,-5px,0) rotate(9deg) scale(1.08);
+  filter: drop-shadow(0 0 12px currentColor);
+}
+.process-item:hover .process-arrow {
+  transform: translate3d(5px,0,0);
+}
+.process-arrow { transition: transform .3s ease; }
+@keyframes orange-orbit-pulse {
+  0%,100% { transform: translate(-50%,-50%) scale(1); }
+  50% { transform: translate(-50%,-50%) scale(1.08); }
+}
+@keyframes orange-orbit-drift {
+  from { rotate: -3deg; }
+  to { rotate: 5deg; }
+}
+@media (hover: none), (pointer: coarse) {
+  .cursor-wave { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::before, .cursor-wave, .service-card, .project-peel, .hero-art,
+  .service-icon, .process-arrow { transition: none !important; animation: none !important; }
+}
