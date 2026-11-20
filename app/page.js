@@ -5,6 +5,14 @@ import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import SiteHeader from "@/components/layout/SiteHeader";
 import ServicesTicker from "@/components/sections/ServicesTicker";
 import ContactSection from "@/components/sections/ContactSection";
+import HeroSection from "@/components/sections/HeroSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
+import ManifestoSection from "@/components/sections/ManifestoSection";
+import ProcessSection from "@/components/sections/ProcessSection";
+import TestimonialSection from "@/components/sections/TestimonialSection";
+import FaqSection from "@/components/sections/FaqSection";
+import FooterSection from "@/components/layout/FooterSection";
 
 const services = [
   { number: "01", title: "AI Content", tag: "CONTENT THAT CONVERTS", description: "Scroll-stopping visuals, product films and campaign assets made with the speed of AI and the eye of a creative studio.", items: ["AI product photography", "Social-first video", "Creative campaign assets"], icon: "✳" },
@@ -34,10 +42,6 @@ const faqs = [
   ["How do I get a quote?", "Use the inquiry form below to tell us what you’re looking for. We’ll review the details and get back to you with next steps."],
 ];
 
-function Arrow({ diagonal = false }) {
-  return <span aria-hidden="true">{diagonal ? "↗" : "→"}</span>;
-}
-
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(0);
 
@@ -46,63 +50,24 @@ export default function Home() {
       <AnnouncementBar />
       <SiteHeader />
 
-      <section className="hero">
-        <div className="hero-glow" />
-        <div className="hero-kicker"><span className="kicker-line" /> CREATIVE STUDIO, REIMAGINED <span className="kicker-index">EST. FOR WHAT’S NEXT</span></div>
-        <h1>Make something<br /><span className="hero-outline">worth</span> <span className="hero-accent">looking at.</span></h1>
-        <div className="hero-bottom">
-          <p className="hero-copy">We turn bold ideas into <strong>AI-powered content</strong> and digital experiences that move brands forward. Human creativity, amplified.</p>
-          <div className="hero-actions"><a className="button button-primary" href="#contact">Start a project <Arrow diagonal /></a><a className="text-link" href="#work">Explore our work <Arrow /></a></div>
-        </div>
-        <div className="hero-art" aria-label="Abstract orange creative artwork">
-          <div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" /><div className="art-core"><span>O</span></div>
-          <div className="art-caption"><span>CREATIVITY, IN A NEW LIGHT</span><span>01 — 04</span></div>
-          <span className="art-side-label">IDEAS IN MOTION / ORANGE AI</span>
-        </div>
-        <div className="hero-foot"><span>SCROLL TO EXPLORE</span><span className="scroll-line" /><span>BASED EVERYWHERE · WORKING WORLDWIDE</span></div>
-      </section>
+      <HeroSection />
+      <ServicesTicker />      <ServicesTicker />
 
-      <ServicesTicker />
+      <ServicesSection services={services} />
 
-      <section className="section services-section" id="services">
-        <div className="section-heading"><div><div className="eyebrow"><span>01</span> / WHAT WE DO</div><h2>Good ideas.<br /><span className="muted">Better execution.</span></h2></div><p className="section-intro">One creative partner for the content and digital presence your brand needs to stand out.</p></div>
-        <div className="service-grid">{services.map((service) => <article className="service-card" key={service.number}><div className="service-top"><span>{service.number} / SERVICE</span><span className="service-icon">{service.icon}</span></div><div><div className="service-tag">{service.tag}</div><h3>{service.title}</h3><p>{service.description}</p></div><ul>{service.items.map(item => <li key={item}>{item}</li>)}</ul><a className="card-link" href="#contact">Explore service <Arrow diagonal /></a></article>)}</div>
-      </section>
+      <PortfolioSection projects={projects} />
 
-      <section className="section work-section" id="work">
-        <div className="section-heading"><div><div className="eyebrow"><span>02</span> / SELECTED WORK</div><h2>Made to make<br /><span className="muted">you look twice.</span></h2></div><p className="section-intro">A glimpse into the worlds we can build. Your brand could be the next one here.</p></div>
-        <div className="project-grid">{projects.map((project, i) => <article className={`project-card ${project.className}`} key={project.title}><div className="project-image" style={{ backgroundImage: `url('${project.image}')` }}><span className="project-number">0{i + 1}</span><span className="project-open"><Arrow diagonal /></span></div><div className="project-meta"><div><span className="project-category">{project.category}</span><h3>{project.title}</h3></div><span className="project-type">{project.type}</span></div></article>)}</div>
-        <p className="work-note">A CURATED PREVIEW <span>— MORE GOOD THINGS IN THE MAKING</span></p>
-      </section>
+      <ManifestoSection />
 
-      <section className="manifesto">
-        <div className="manifesto-orb" />
-        <div className="eyebrow"><span>03</span> / THE ORANGE POINT OF VIEW</div>
-        <p>AI is the tool.<br /> <span className="manifesto-highlight">Imagination</span> is the advantage.</p>
-        <div className="manifesto-bottom"><span>WE BELIEVE THE FUTURE BELONGS TO BRANDS THAT THINK DIFFERENTLY.</span><span>HUMAN-LED. AI-POWERED. ALWAYS INTENTIONAL.</span></div>
-      </section>
+      <ProcessSection steps={steps} />
 
-      <section className="section process-section" id="process">
-        <div className="section-heading"><div><div className="eyebrow"><span>04</span> / HOW IT WORKS</div><h2>From first thought<br /><span className="muted">to final frame.</span></h2></div><p className="section-intro">A clear, collaborative process. No mystery, no unnecessary layers — just good work, done thoughtfully.</p></div>
-        <div className="process-list">{steps.map(([number, title, description]) => <article className="process-item" key={number}><span className="process-number">{number}</span><h3>{title}</h3><p>{description}</p><span className="process-arrow"><Arrow diagonal /></span></article>)}</div>
-      </section>
+      <TestimonialSection />
 
-      <section className="testimonial-section">
-        <div className="eyebrow"><span>05</span> / KIND WORDS</div>
-        <div className="quote-mark">“</div>
-        <blockquote>Great creative doesn’t just fill a feed. It gives people a reason to <span>care.</span></blockquote>
-        <div className="quote-credit"><span className="quote-rule" /><span>THE ORANGE AI CREATIVE PHILOSOPHY</span></div>
-        <p className="testimonial-note">We’re building the kind of partnerships that make ambitious work possible. Be one of our first collaborators.</p>
-      </section>
-
-      <section className="section faq-section" id="faq">
-        <div className="section-heading"><div><div className="eyebrow"><span>06</span> / GOOD TO KNOW</div><h2>Questions?<br /><span className="muted">We’ve got you.</span></h2></div><p className="section-intro">A few things you might be wondering before we get started.</p></div>
-        <div className="faq-list">{faqs.map(([question, answer], index) => <article className={openFaq === index ? "faq-item faq-active" : "faq-item"} key={question}><button onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span className="faq-number">0{index + 1}</span><span>{question}</span><span className="faq-toggle">{openFaq === index ? "−" : "+"}</span></button>{openFaq === index && <p>{answer}</p>}</article>)}</div>
-      </section>
+      <FaqSection faqs={faqs} openFaq={openFaq} setOpenFaq={setOpenFaq} />
 
       <ContactSection />
 
-      <footer className="footer"><div className="footer-main"><a className="brand footer-brand" href="#"><span className="brand-mark">o<span>.</span></span><span>orange<span className="brand-light">ai</span></span></a><p>Ideas with an edge.<br />Made for what’s next.</p><a className="back-top" href="#">BACK TO TOP ↑</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} ORANGE AI STUDIO. ALL RIGHTS RESERVED.</span><span>INDEPENDENT BY NATURE. CREATIVE BY DESIGN.</span><a href="mailto:hello@orangeai.studio">SAY HELLO ↗</a></div></footer>
+      <FooterSection />
     </main>
   );
 }
