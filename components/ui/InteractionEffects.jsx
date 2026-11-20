@@ -15,13 +15,13 @@ export default function InteractionEffects() {
         const y = window.scrollY;
 
         // First orange passage: fade in, hold briefly, then return to dark.
-        const firstIn = clamp(y, 260, 780);
-        const firstOut = clamp(y, 1120, 1740);
+        const firstIn = clamp(y, 180, 900);
+        const firstOut = clamp(y, 1500, 2250);
         const firstBand = firstIn * (1 - firstOut);
 
         // Second orange passage further down the page.
-        const secondIn = clamp(y, 2550, 3070);
-        const secondOut = clamp(y, 3450, 4070);
+        const secondIn = clamp(y, 2350, 3100);
+        const secondOut = clamp(y, 3950, 4750);
         const secondBand = secondIn * (1 - secondOut);
 
         root.style.setProperty("--scroll-orange", Math.max(firstBand, secondBand).toFixed(3));
