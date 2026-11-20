@@ -1,3 +1,5 @@
+import Arrow from "@/components/ui/Arrow";
+
 export default function ServicesSection({ services }) {
   return (
     <section className="section services-section" id="services">
