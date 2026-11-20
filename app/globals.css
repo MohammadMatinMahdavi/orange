@@ -1536,3 +1536,28 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   .inquiry-progress-track span { transition: none; }
 }
+
+
+/* Fit the inquiry form into a single desktop viewport more comfortably. */
+@media (min-width: 641px) {
+  .contact-layout { align-items: start; gap: clamp(30px, 4vw, 58px); }
+  .contact-form { gap: 13px; padding: clamp(20px, 2vw, 27px); }
+  .form-card-heading { padding-bottom: 3px; }
+  .form-card-heading h3 { font-size: clamp(23px, 2.2vw, 28px); }
+  .inquiry-progress { padding: 9px 12px 8px; }
+  .inquiry-progress-track { margin: 7px 0 6px; }
+  .contact-form label { gap: 6px; font-size: 10px; }
+  .contact-form input,
+  .contact-form textarea { padding: 9px 12px; font-size: 12px; }
+  .contact-form .service-choice { min-height: 59px; padding: 8px 27px 8px 10px; gap: 9px; }
+  .service-choice-icon { flex-basis: 30px; width: 30px; height: 30px; font-size: 15px; }
+  .service-picker legend { margin-bottom: 8px; font-size: 10px; }
+  .service-picker-grid { gap: 7px; }
+  .service-picker-hint { margin-top: 7px; }
+  .contact-form textarea { min-height: 68px; }
+  .contact-form .form-submit { padding: 13px 17px; }
+  .form-note { font-size: 8px; }
+}
+@media (min-width: 641px) and (max-width: 900px) {
+  .service-picker-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
