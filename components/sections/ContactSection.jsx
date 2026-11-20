@@ -20,7 +20,7 @@ export default function ContactSection() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const emailIsValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email.trim());
+  const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
   const completedFields = Number(name.trim().length > 0) + Number(emailIsValid) + Number(Boolean(selectedService));
   const progress = Math.min(100, Math.round((completedFields / 3) * 90 + (message.trim() ? 10 : 0)));
 
