@@ -22,9 +22,9 @@ const services = [
 ];
 
 const projects = [
-  { category: "AI CAMPAIGN", title: "Objects of desire.", type: "Product visuals", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85", className: "project-tall" },
-  { category: "REAL ADS", title: "Made to move.", type: "Performance creative", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=85", className: "" },
-  { category: "DIGITAL EXPERIENCE", title: "A better first click.", type: "Web design", image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=85", className: "" },
+  { category: "AI CAMPAIGN", title: "Objects of desire.", type: "Product visuals", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85", className: "project-tall", video: "/videos/project-01.mp4" },
+  { category: "REAL ADS", title: "Made to move.", type: "Performance creative", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=85", className: "", video: "/videos/project-02.mp4" },
+  { category: "DIGITAL EXPERIENCE", title: "A better first click.", type: "Web design", image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=85", className: "", video: "/videos/project-03.mp4" },
 ];
 
 const steps = [
