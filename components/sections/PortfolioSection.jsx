@@ -1,3 +1,5 @@
+import Arrow from "@/components/ui/Arrow";
+
 export default function PortfolioSection({ projects }) {
   return (
     <section className="section work-section" id="work">
