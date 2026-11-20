@@ -22,9 +22,33 @@ const services = [
 ];
 
 const projects = [
-  { category: "AI CAMPAIGN", title: "Objects of desire.", type: "Product visuals", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85", className: "project-tall", video: "/videos/project-01.mp4" },
-  { category: "REAL ADS", title: "Made to move.", type: "Performance creative", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=85", className: "", video: "/videos/project-02.mp4" },
-  { category: "DIGITAL EXPERIENCE", title: "A better first click.", type: "Web design", image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=85", className: "", video: "/videos/project-03.mp4" },
+  {
+    category: "AI CAMPAIGN", title: "Objects of desire.", type: "Product visuals",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85",
+    className: "project-tall", video: "/videos/project-01.mp4", label: "SPECULATIVE CONCEPT",
+    challenge: "Make a familiar product feel impossible to scroll past.",
+    approach: "Build a high-contrast visual direction around form, texture and a bold hero frame, then extend it into a consistent campaign language.",
+    deliverables: ["Art direction", "AI-assisted product imagery", "Social campaign frames"],
+    outcome: "Creative direction concept — no client performance data or commercial results are claimed."
+  },
+  {
+    category: "REAL ADS", title: "Made to move.", type: "Performance creative",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=85",
+    className: "", video: "/videos/project-02.mp4", label: "SPECULATIVE CONCEPT",
+    challenge: "Communicate a product benefit quickly in a crowded social feed.",
+    approach: "Lead with a clear opening hook, keep the product in focus and structure the story for short-form vertical placements.",
+    deliverables: ["Hook exploration", "Short-form ad concept", "Creative variation plan"],
+    outcome: "Ad concept direction — no campaign results or client relationship are implied."
+  },
+  {
+    category: "DIGITAL EXPERIENCE", title: "A better first click.", type: "Web design",
+    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=85",
+    className: "", video: "/videos/project-03.mp4", label: "SPECULATIVE CONCEPT",
+    challenge: "Turn a first visit into a clear next step without overwhelming the visitor.",
+    approach: "Use a focused landing-page hierarchy, decisive typography and a single primary conversion path.",
+    deliverables: ["Landing-page concept", "Responsive UI direction", "Conversion-focused content structure"],
+    outcome: "Exploratory web concept — not a live client launch or measured conversion result."
+  },
 ];
 
 const steps = [
