@@ -1,3 +1,5 @@
+import Arrow from "@/components/ui/Arrow";
+
 export default function HeroSection() {
   return (
     <section className="hero">
