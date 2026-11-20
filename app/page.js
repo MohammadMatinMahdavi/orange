@@ -51,7 +51,7 @@ export default function Home() {
       <SiteHeader />
 
       <HeroSection />
-      <ServicesTicker />      <ServicesTicker />
+      <ServicesTicker />
 
       <ServicesSection services={services} />
 
