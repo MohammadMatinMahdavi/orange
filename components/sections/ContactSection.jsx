@@ -16,6 +16,13 @@ function Arrow() {
 
 export default function ContactSection() {
   const [selectedService, setSelectedService] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const emailIsValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email.trim());
+  const completedFields = Number(name.trim().length > 0) + Number(emailIsValid) + Number(Boolean(selectedService));
+  const progress = Math.min(100, Math.round((completedFields / 3) * 90 + (message.trim() ? 10 : 0)));
 
   return (
     <section className="contact-section relative isolate overflow-hidden" id="contact">
@@ -35,8 +42,13 @@ export default function ContactSection() {
             <div><span className="form-step">PROJECT INQUIRY · 01</span><h3>Let’s talk details.</h3></div>
             <span className="form-spark" aria-hidden="true">✳</span>
           </div>
-          <label>Your name<input name="name" placeholder="How should we call you?" required /></label>
-          <label>Email address<input name="email" type="email" placeholder="you@company.com" required /></label>
+          <div className="inquiry-progress" role="status" aria-live="polite" aria-label={`Inquiry ${progress}% complete`}>
+            <div className="inquiry-progress-meta"><span>YOUR INQUIRY PROGRESS</span><b>{String(progress).padStart(2, "0")}%</b></div>
+            <div className="inquiry-progress-track"><span style={{ width: `${progress}%` }} /></div>
+            <div className="inquiry-progress-steps"><span className={name.trim() ? "is-complete" : ""}>YOUR NAME</span><span className={emailIsValid ? "is-complete" : ""}>EMAIL</span><span className={selectedService ? "is-complete" : ""}>SERVICE</span><span className={message.trim() ? "is-complete" : ""}>DETAILS</span></div>
+          </div>
+          <label>Your name<input name="name" value={name} onChange={(event) => setName(event.target.value)} placeholder="How should we call you?" required /></label>
+          <label>Email address<input name="email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@company.com" required /></label>
 
           <fieldset className="service-picker">
             <legend>What do you need?</legend>
@@ -61,7 +73,7 @@ export default function ContactSection() {
             <span className="service-picker-hint">{selectedService ? `SELECTED · ${selectedService.toUpperCase()}` : "CHOOSE THE SERVICE THAT FITS YOUR IDEA"}</span>
           </fieldset>
 
-          <label>Tell us a little about it<textarea name="message" rows="3" placeholder="A few words about your project..." /></label>
+          <label>Tell us a little about it<textarea name="message" rows="3" value={message} onChange={(event) => setMessage(event.target.value)} placeholder="A few words about your project..." /></label>
           <button className="button button-primary form-submit group w-full justify-between rounded-lg shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-1 hover:shadow-orange-500/30" type="submit">Send your inquiry <Arrow /></button>
           <span className="form-note">By sending this, you’re taking the first step. We’ll take it from here.</span>
         </form>
