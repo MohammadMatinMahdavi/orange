@@ -1,0 +1,369 @@
+{
+  "announcement": {
+    "eyebrow": "INDEPENDENT CREATIVE STUDIO",
+    "line": "HUMAN IDEAS. AI POSSIBILITY."
+  },
+  "header": {
+    "links": [
+      "Our impact",
+      "What we do",
+      "Selected work",
+      "Our process",
+      "FAQs"
+    ],
+    "talk": "Let’s talk",
+    "start": "Start a project",
+    "home": "Orange AI home",
+    "choose": "Choose language",
+    "languageLabel": "LANGUAGE / IDIOMA / LANGUE"
+  },
+  "hero": {
+    "kicker": "CREATIVE STUDIO, REIMAGINED",
+    "est": "EST. FOR WHAT’S NEXT",
+    "line1": "Make something",
+    "outline": "worth",
+    "accent": "looking at.",
+    "copy": "We turn bold ideas into AI-powered content and digital experiences that move brands forward. Human creativity, amplified.",
+    "start": "Start a project",
+    "explore": "Explore our work",
+    "foot": "INDEPENDENT CREATIVE STUDIO",
+    "world": "WORKING WORLDWIDE"
+  },
+  "ticker": {
+    "label": "Our capabilities",
+    "items": [
+      "AI CONTENT",
+      "REAL ADS",
+      "UGC STUDIO",
+      "WEB DESIGN",
+      "CREATIVE DIRECTION"
+    ]
+  },
+  "trust": {
+    "eyebrow": "TRUST / PROOF, NOT PROMISES",
+    "title1": "Built on trust.",
+    "title2": "Measured by impact.",
+    "intro": "Good creative work starts with a relationship — and earns its value through what gets delivered.",
+    "stats": [
+      {
+        "value": "XX+",
+        "label": "CLIENTS & PARTNERS",
+        "detail": "Brands that have trusted our creative work",
+        "tone": "blue"
+      },
+      {
+        "value": "XX+",
+        "label": "PROJECTS DELIVERED",
+        "detail": "Ideas turned into real-world experiences",
+        "tone": "green"
+      }
+    ],
+    "note": "XX+ ARE PLACEHOLDERS — REPLACE WITH VERIFIED COMPANY TOTALS BEFORE LAUNCH."
+  },
+  "services": {
+    "eyebrow": "01 / WHAT WE DO",
+    "title1": "Good ideas.",
+    "title2": "Better execution.",
+    "intro": "One creative partner for the content and digital presence your brand needs to stand out.",
+    "cards": [
+      {
+        "number": "01",
+        "title": "AI Content",
+        "tag": "CONTENT THAT CONVERTS",
+        "description": "Scroll-stopping visuals, product films and campaign assets made with the speed of AI and the eye of a creative studio.",
+        "items": [
+          "AI product photography",
+          "Social-first video",
+          "Creative campaign assets"
+        ],
+        "icon": "✳"
+      },
+      {
+        "number": "02",
+        "title": "Real Ads",
+        "tag": "PERFORMANCE CREATIVE",
+        "description": "Ad creatives built to earn attention, communicate value and give your next campaign more room to win.",
+        "items": [
+          "Paid social creatives",
+          "Ad variations & testing",
+          "Product-led storytelling"
+        ],
+        "icon": "↗"
+      },
+      {
+        "number": "03",
+        "title": "UGC Studio",
+        "tag": "HUMAN-LED STORYTELLING",
+        "description": "Authentic creator-style content that feels native to the feed and makes people want to know more.",
+        "items": [
+          "UGC-style videos",
+          "Creator concepts & scripts",
+          "Hooks and testimonials"
+        ],
+        "icon": "◉"
+      },
+      {
+        "number": "04",
+        "title": "Web Design",
+        "tag": "DIGITAL EXPERIENCES",
+        "description": "Distinctive, conversion-minded websites that turn a first impression into a lasting relationship.",
+        "items": [
+          "Landing pages",
+          "Brand websites",
+          "Web design & development"
+        ],
+        "icon": "⌘"
+      }
+    ],
+    "link": "Explore service"
+  },
+  "portfolio": {
+    "eyebrow": "02 / SELECTED WORK",
+    "title1": "Made to make",
+    "title2": "you look twice.",
+    "intro": "A glimpse into the worlds we can build. Your brand could be the next one here.",
+    "projects": [
+      {
+        "category": "AI CAMPAIGN",
+        "title": "Objects of desire.",
+        "type": "Product visuals",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85",
+        "className": "project-tall",
+        "video": "/videos/project-01.mp4"
+      },
+      {
+        "category": "REAL ADS",
+        "title": "Made to move.",
+        "type": "Performance creative",
+        "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=85",
+        "className": "",
+        "video": "/videos/project-02.mp4"
+      },
+      {
+        "category": "DIGITAL EXPERIENCE",
+        "title": "A better first click.",
+        "type": "Web design",
+        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=85",
+        "className": "",
+        "video": "/videos/project-03.mp4"
+      }
+    ],
+    "note": "A CURATED PREVIEW",
+    "noteTail": "MORE GOOD THINGS IN THE MAKING",
+    "frame": "ORANGE AI / SELECTED FRAME",
+    "soundOff": "SOUND OFF",
+    "soundOn": "SOUND ON",
+    "soundEnable": "Turn project video sound on",
+    "soundMute": "Mute project video"
+  },
+  "manifesto": {
+    "eyebrow": "03 / OUR POINT OF VIEW",
+    "before": "AI is the tool.",
+    "highlight": "Imagination",
+    "after": "is the advantage.",
+    "bottom1": "WE BELIEVE THE FUTURE BELONGS TO BRANDS THAT THINK DIFFERENTLY.",
+    "bottom2": "HUMAN-LED. AI-POWERED. ALWAYS INTENTIONAL."
+  },
+  "process": {
+    "eyebrow": "04 / HOW IT WORKS",
+    "title1": "From first thought",
+    "title2": "to final frame.",
+    "intro": "A clear, collaborative process. No mystery, no unnecessary layers — just good work, done thoughtfully.",
+    "steps": [
+      [
+        "Tell us the brief",
+        "Share your goals, audience and the kind of content you need. A rough idea is more than enough to start."
+      ],
+      [
+        "We shape the concept",
+        "We turn your brief into a clear creative direction, with the right format, style and deliverables."
+      ],
+      [
+        "Made by Orange",
+        "Our creative process blends human direction, AI tools and thoughtful craft to bring the idea to life."
+      ],
+      [
+        "Ready for the world",
+        "Review, refine and receive polished assets built to work across the channels that matter."
+      ]
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "06 / WORDS THAT MATTER",
+    "title": "YOUR COMMENTS",
+    "headline": "A little appreciation goes a long way.",
+    "intro": "Every project leaves a story behind. Hover over a letter to open it, or tap to read each note.",
+    "open": "HOVER TO OPEN",
+    "opened": "LETTER OPEN",
+    "paper": "A NOTE FROM OUR JOURNEY",
+    "panel": "A FEW WORDS FROM THE OTHER SIDE",
+    "disclaimer": "These are illustrative demo comments, not verified client reviews. They will be replaced with genuine, approved feedback before publication.",
+    "letters": [
+      {
+        "service": "AI CONTENT",
+        "title": "A completely new perspective",
+        "quote": "Orange took a rough idea and turned it into a visual world that felt unmistakably like our brand. The speed was impressive, but the attention to detail made the real difference.",
+        "name": "Maya Bennett",
+        "role": "Brand Director · Northstar Studio",
+        "initials": "MB",
+        "accent": "blue",
+        "mark": "✳"
+      },
+      {
+        "service": "REAL ADS",
+        "title": "Creative that gets noticed",
+        "quote": "The team understood what we needed our ads to do. The concepts felt fresh, the message was clear, and we finally had creative variations that gave our campaign room to grow.",
+        "name": "Ethan Cole",
+        "role": "Founder · Form & Field",
+        "initials": "EC",
+        "accent": "green",
+        "mark": "↗"
+      },
+      {
+        "service": "UGC STUDIO",
+        "title": "It felt genuinely human",
+        "quote": "We wanted content that sounded like a real recommendation, not another polished advert. Orange found that balance and gave us a collection that felt natural from the first frame.",
+        "name": "Sofia Rivera",
+        "role": "Marketing Lead · Sunday Supply",
+        "initials": "SR",
+        "accent": "teal",
+        "mark": "◉"
+      },
+      {
+        "service": "WEB DESIGN",
+        "title": "Our best first impression",
+        "quote": "The new website finally tells our story the way we always imagined. Every detail feels considered, the experience is effortless, and the whole brand feels more confident online.",
+        "name": "Oliver Hayes",
+        "role": "Co-founder · Atelier One",
+        "initials": "OH",
+        "accent": "teal",
+        "mark": "⌘"
+      },
+      {
+        "service": "COLLABORATION",
+        "title": "A team that gets it",
+        "quote": "From the first conversation to the final delivery, the process felt thoughtful and collaborative. They listened, brought ideas of their own, and made every round feel like progress.",
+        "name": "Amelia Brooks",
+        "role": "Creative Director · Common Ground",
+        "initials": "AB",
+        "accent": "blue",
+        "mark": "✳"
+      },
+      {
+        "service": "THE OUTCOME",
+        "title": "More than we expected",
+        "quote": "What stood out most was how everything came together. The work gave us a clearer story, a stronger presence, and the confidence to take our next step.",
+        "name": "Noah Williams",
+        "role": "Owner · The Good Habit",
+        "initials": "NW",
+        "accent": "green",
+        "mark": "↗"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "06 / GOOD TO KNOW",
+    "title1": "Questions?",
+    "title2": "We’ve got you.",
+    "intro": "A few things you might be wondering before we get started.",
+    "items": [
+      [
+        "What kind of content can Orange AI create?",
+        "From AI product imagery and short-form video to UGC-style content, paid ad creatives and complete website experiences. If you have a format in mind, tell us about it."
+      ],
+      [
+        "Do I need to have a clear brief?",
+        "Not at all. A product, a goal or even a rough idea is enough. We can help shape the direction and recommend the right deliverables."
+      ],
+      [
+        "How long does a project take?",
+        "Timelines depend on scope and deliverables. Once we understand your brief, we’ll share a realistic timeline before work begins."
+      ],
+      [
+        "Can I request revisions?",
+        "Yes. Every project includes a review stage so we can align the final work with your direction. The exact revision scope is agreed in your proposal."
+      ],
+      [
+        "How do I get a quote?",
+        "Use the inquiry form below to tell us what you’re looking for. We’ll review the details and get back to you with next steps."
+      ]
+    ]
+  },
+  "contact": {
+    "eyebrow": "07 / YOUR NEXT MOVE",
+    "overline": "LET’S MAKE SOMETHING MATTER",
+    "title1": "Have a good",
+    "title2": "feeling about",
+    "title3": "this?",
+    "copy": "Tell us what you’re dreaming up. We’ll bring the creative thinking, the tools and a plan to make it happen.",
+    "trust": "A GOOD IDEA STARTS WITH A CONVERSATION",
+    "formStep": "PROJECT INQUIRY · 01",
+    "formTitle": "Let’s talk details.",
+    "progress": "YOUR INQUIRY PROGRESS",
+    "name": "Your name",
+    "namePlaceholder": "How should we call you?",
+    "email": "Email address",
+    "emailPlaceholder": "you@company.com",
+    "serviceLegend": "What do you need?",
+    "serviceHint": "CHOOSE THE SERVICE THAT FITS YOUR IDEA",
+    "selected": "SELECTED",
+    "message": "Tell us a little about it",
+    "messagePlaceholder": "A few words about your project...",
+    "submit": "Send your inquiry",
+    "note": "By sending this, you’re taking the first step. We’ll take it from here.",
+    "steps": [
+      "YOUR NAME",
+      "EMAIL",
+      "SERVICE",
+      "DETAILS"
+    ],
+    "services": [
+      {
+        "name": "AI Content",
+        "detail": "Visuals, concepts & campaigns",
+        "icon": "✳"
+      },
+      {
+        "name": "Real Ads",
+        "detail": "Performance-led creative",
+        "icon": "↗"
+      },
+      {
+        "name": "UGC Studio",
+        "detail": "Creator-style content",
+        "icon": "◉"
+      },
+      {
+        "name": "Web Design",
+        "detail": "Digital experiences",
+        "icon": "⌘"
+      },
+      {
+        "name": "Something else",
+        "detail": "A little different",
+        "icon": "＋"
+      }
+    ]
+  },
+  "footer": {
+    "eyebrow": "HAVE A GOOD ONE IN MIND?",
+    "title1": "LET’S MAKE",
+    "title2": "IT MATTER.",
+    "cta": "TELL US ABOUT IT",
+    "brand": "Ideas with an edge.",
+    "brand2": "Made for what’s next.",
+    "explore": "EXPLORE",
+    "links": [
+      "Services",
+      "Selected work",
+      "Our approach",
+      "FAQs",
+      "Start a project"
+    ],
+    "connect": "GOOD THINGS START HERE",
+    "location": "INDEPENDENT BY NATURE. CREATIVE BY DESIGN.",
+    "copyright": "ORANGE AI STUDIO. ALL RIGHTS RESERVED.",
+    "bottom": "BUILT FOR WHAT’S NEXT",
+    "back": "BACK TO TOP"
+  }
+}
