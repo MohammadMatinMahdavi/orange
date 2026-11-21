@@ -21,6 +21,41 @@ function LanguageSwitcher({ locale, t }) {
     </div>}
   </div>;
 }
+
+function ThemeSwitcher({ t }) {
+  const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState("blue");
+
+  useEffect(() => {
+    const saved = window.localStorage.getItem("orange-ai-theme");
+    const initial = saved === "orange" ? "orange" : "blue";
+    setTheme(initial);
+    document.documentElement.dataset.theme = initial;
+    const close = (event) => { if (event.key === "Escape") setOpen(false); };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
+
+  const chooseTheme = (nextTheme) => {
+    setTheme(nextTheme);
+    document.documentElement.dataset.theme = nextTheme;
+    window.localStorage.setItem("orange-ai-theme", nextTheme);
+    setOpen(false);
+  };
+
+  return <div className="theme-switcher">
+    <button type="button" className={`theme-trigger ${open ? "theme-trigger-open" : ""}`} onClick={() => setOpen((value) => !value)} aria-label={t.themeChoose} aria-expanded={open} aria-haspopup="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42" /><circle cx="12" cy="12" r="4" /></svg>
+      <span>{theme === "orange" ? t.themeOrangeShort : t.themeBlueShort}</span><i aria-hidden="true">⌄</i>
+    </button>
+    {open && <div className="theme-menu" role="menu" aria-label={t.themeChoose}>
+      <span className="theme-menu-kicker">{t.themeLabel}</span>
+      <button type="button" role="menuitemradio" aria-checked={theme === "blue"} className={`theme-option ${theme === "blue" ? "theme-option-active" : ""}`} onClick={() => chooseTheme("blue")}><span className="theme-swatch theme-swatch-blue" /><span>{t.themeBlue}</span>{theme === "blue" && <b>✓</b>}</button>
+      <button type="button" role="menuitemradio" aria-checked={theme === "orange"} className={`theme-option ${theme === "orange" ? "theme-option-active" : ""}`} onClick={() => chooseTheme("orange")}><span className="theme-swatch theme-swatch-orange" /><span>{t.themeOrange}</span>{theme === "orange" && <b>✓</b>}</button>
+    </div>}
+  </div>;
+}
+
 function Arrow() { return <span aria-hidden="true">↗</span>; }
 
 export default function SiteHeader({ locale = "en", t }) {
@@ -37,7 +72,7 @@ export default function SiteHeader({ locale = "en", t }) {
       <a className="brand brand-home shrink-0" href={locale === "en" ? "/" : `/${locale}`} aria-label={t.home}><span className="brand-mark">o<span>.</span></span><span>orange<span className="brand-light">ai</span></span></a>
       <button className={`menu-toggle group inline-flex items-center justify-center rounded-full transition-colors hover:bg-white/10 ${menuOpen ? "menu-toggle-open" : ""}`} onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? t.closeNav : t.openNav} aria-expanded={menuOpen} aria-controls="primary-navigation"><span /><span /></button>
       <nav id="primary-navigation" className={`nav-links nav-center ${menuOpen ? "nav-open" : ""}`}>{links.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}<a className="mobile-nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>{t.start} <Arrow /></a></nav>
-      <div className="header-actions"><LanguageSwitcher locale={locale} t={t} /><a className="nav-cta nav-cta-right inline-flex items-center justify-self-end gap-3 rounded-full transition-all duration-300" href="#contact">{t.talk} <Arrow /></a></div>
+      <div className="header-actions"><ThemeSwitcher t={t} /><LanguageSwitcher locale={locale} t={t} /><a className="nav-cta nav-cta-right inline-flex items-center justify-self-end gap-3 rounded-full transition-all duration-300" href="#contact">{t.talk} <Arrow /></a></div>
     </div>
   </header>;
 }
