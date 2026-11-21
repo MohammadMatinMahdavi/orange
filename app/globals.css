@@ -2254,3 +2254,18 @@ body::before {
   }
   .contact-section { padding-bottom: 95px; }
 }
+
+
+/* Keep the wide lower inquiry panel clear of the contact introduction. */
+@media (min-width: 901px) {
+  .contact-form-bottom {
+    margin-top: clamp(82px, 7.5vw, 112px);
+  }
+  .contact-form-top {
+    border-bottom: 1px solid rgba(119,198,255,.19);
+    border-radius: 23px;
+  }
+  .contact-form-bottom {
+    border-radius: 23px;
+  }
+}
