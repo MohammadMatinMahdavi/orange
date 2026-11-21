@@ -4,6 +4,7 @@ import { useState } from "react";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import SiteHeader from "@/components/layout/SiteHeader";
 import ServicesTicker from "@/components/sections/ServicesTicker";
+import TrustStatsSection from "@/components/sections/TrustStatsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
@@ -54,6 +55,7 @@ export default function Home() {
 
       <HeroSection />
       <ServicesTicker />
+      <TrustStatsSection />
 
       <ServicesSection services={services} />
 
