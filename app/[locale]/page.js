@@ -1,12 +1,7 @@
 import Home from "../page";
 import { notFound } from "next/navigation";
-import en from "@/messages/en.json";
-import es from "@/messages/es.json";
-import fr from "@/messages/fr.json";
 
 const supportedLocales = ["es", "fr"];
-const dictionaries = { en, es, fr };
-
 export function generateStaticParams() {
   return supportedLocales.map((locale) => ({ locale }));
 }
