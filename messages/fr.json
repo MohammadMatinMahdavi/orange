@@ -1,0 +1,369 @@
+{
+  "announcement": {
+    "eyebrow": "STUDIO CRÉATIF INDÉPENDANT",
+    "line": "IDÉES HUMAINES. POSSIBILITÉS DE L’IA."
+  },
+  "header": {
+    "links": [
+      "Notre impact",
+      "Nos services",
+      "Nos réalisations",
+      "Notre méthode",
+      "FAQ"
+    ],
+    "talk": "Parlons-en",
+    "start": "Démarrer un projet",
+    "home": "Accueil Orange AI",
+    "choose": "Choisir la langue",
+    "languageLabel": "LANGUE / LANGUAGE / IDIOMA"
+  },
+  "hero": {
+    "kicker": "LE STUDIO CRÉATIF RÉINVENTÉ",
+    "est": "TOURNÉ VERS DEMAIN",
+    "line1": "Créons quelque chose",
+    "outline": "qui mérite",
+    "accent": "un second regard.",
+    "copy": "Nous transformons les idées audacieuses en contenus propulsés par l’IA et en expériences numériques qui font avancer les marques. La créativité humaine, amplifiée.",
+    "start": "Démarrer un projet",
+    "explore": "Découvrir nos projets",
+    "foot": "STUDIO CRÉATIF INDÉPENDANT",
+    "world": "ACTIFS DANS LE MONDE ENTIER"
+  },
+  "ticker": {
+    "label": "Nos expertises",
+    "items": [
+      "CONTENU IA",
+      "PUBLICITÉS",
+      "STUDIO UGC",
+      "DESIGN WEB",
+      "DIRECTION CRÉATIVE"
+    ]
+  },
+  "trust": {
+    "eyebrow": "CONFIANCE / DES FAITS, PAS DES PROMESSES",
+    "title1": "Bâtir la confiance.",
+    "title2": "Mesurer l’impact.",
+    "intro": "Un bon travail créatif commence par une relation et prouve sa valeur par les résultats livrés.",
+    "stats": [
+      {
+        "value": "XX+",
+        "label": "CLIENTS ET PARTENAIRES",
+        "detail": "Les marques qui nous ont confié leur créativité",
+        "tone": "blue"
+      },
+      {
+        "value": "XX+",
+        "label": "PROJETS RÉALISÉS",
+        "detail": "Des idées transformées en expériences concrètes",
+        "tone": "green"
+      }
+    ],
+    "note": "XX+ EST UNE VALEUR PROVISOIRE : À REMPLACER PAR DES CHIFFRES VÉRIFIÉS AVANT LE LANCEMENT."
+  },
+  "services": {
+    "eyebrow": "01 / NOS SERVICES",
+    "title1": "De bonnes idées.",
+    "title2": "Une meilleure exécution.",
+    "intro": "Un partenaire créatif pour le contenu et la présence numérique dont votre marque a besoin pour se démarquer.",
+    "cards": [
+      {
+        "number": "01",
+        "title": "Contenu IA",
+        "tag": "DU CONTENU QUI CONVERTIT",
+        "description": "Des visuels qui captent le regard, des films produit et des campagnes créés avec la rapidité de l’IA et l’œil d’un studio créatif.",
+        "items": [
+          "Photographie produit par IA",
+          "Vidéo pensée pour les réseaux",
+          "Créations pour vos campagnes"
+        ],
+        "icon": "✳"
+      },
+      {
+        "number": "02",
+        "title": "Publicités",
+        "tag": "CRÉATION AXÉE PERFORMANCE",
+        "description": "Des créations publicitaires conçues pour attirer l’attention, transmettre votre valeur et donner plus d’impact à vos campagnes.",
+        "items": [
+          "Créations pour réseaux payants",
+          "Variantes et tests publicitaires",
+          "Storytelling centré produit"
+        ],
+        "icon": "↗"
+      },
+      {
+        "number": "03",
+        "title": "Studio UGC",
+        "tag": "DES HISTOIRES HUMAINES",
+        "description": "Du contenu authentique inspiré des créateurs, naturellement intégré au fil et qui donne envie d’en savoir plus.",
+        "items": [
+          "Vidéos au format UGC",
+          "Concepts et scripts créateurs",
+          "Accroches et témoignages"
+        ],
+        "icon": "◉"
+      },
+      {
+        "number": "04",
+        "title": "Design web",
+        "tag": "EXPÉRIENCES NUMÉRIQUES",
+        "description": "Des sites distinctifs, pensés pour convertir, qui transforment une première impression en relation durable.",
+        "items": [
+          "Pages d’atterrissage",
+          "Sites de marque",
+          "Conception et développement web"
+        ],
+        "icon": "⌘"
+      }
+    ],
+    "link": "Découvrir le service"
+  },
+  "portfolio": {
+    "eyebrow": "02 / PROJETS CHOISIS",
+    "title1": "De quoi",
+    "title2": "vous faire regarder.",
+    "intro": "Un aperçu des univers que nous pouvons créer. Votre marque pourrait être la prochaine.",
+    "projects": [
+      {
+        "category": "CAMPAGNE IA",
+        "title": "Objets de désir.",
+        "type": "Visuels produit",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85",
+        "className": "project-tall",
+        "video": "/videos/project-01.mp4"
+      },
+      {
+        "category": "PUBLICITÉS",
+        "title": "Fait pour bouger.",
+        "type": "Création performance",
+        "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=85",
+        "className": "",
+        "video": "/videos/project-02.mp4"
+      },
+      {
+        "category": "EXPÉRIENCE NUMÉRIQUE",
+        "title": "Un meilleur premier clic.",
+        "type": "Design web",
+        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=85",
+        "className": "",
+        "video": "/videos/project-03.mp4"
+      }
+    ],
+    "note": "UNE SÉLECTION SOIGNÉE",
+    "noteTail": "D’AUTRES BELLES IDÉES ARRIVENT",
+    "frame": "ORANGE AI / IMAGE SÉLECTIONNÉE",
+    "soundOff": "SON COUPÉ",
+    "soundOn": "SON ACTIVÉ",
+    "soundEnable": "Activer le son de la vidéo",
+    "soundMute": "Couper le son de la vidéo"
+  },
+  "manifesto": {
+    "eyebrow": "03 / NOTRE VISION",
+    "before": "L’IA est un outil.",
+    "highlight": "L’imagination",
+    "after": "fait la différence.",
+    "bottom1": "NOUS CROYONS QUE L’AVENIR APPARTIENT AUX MARQUES QUI PENSENT AUTREMENT.",
+    "bottom2": "GUIDÉ PAR L’HUMAIN. PROPULSÉ PAR L’IA. TOUJOURS AVEC INTENTION."
+  },
+  "process": {
+    "eyebrow": "04 / NOTRE MÉTHODE",
+    "title1": "De la première idée",
+    "title2": "à la dernière image.",
+    "intro": "Un processus clair et collaboratif. Sans mystère ni étapes superflues : du bon travail, réalisé avec soin.",
+    "steps": [
+      [
+        "Parlez-nous du projet",
+        "Partagez vos objectifs, votre public et le contenu souhaité. Une simple idée suffit pour commencer."
+      ],
+      [
+        "Nous dessinons le concept",
+        "Nous transformons votre brief en direction créative claire, avec le bon format, le bon style et les bons livrables."
+      ],
+      [
+        "La création par Orange",
+        "Notre approche associe direction humaine, outils d’IA et savoir-faire créatif pour donner vie à votre idée."
+      ],
+      [
+        "Prêt à être partagé",
+        "Faites vos retours, affinez le résultat et recevez des créations soignées, prêtes pour les canaux essentiels."
+      ]
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "06 / DES MOTS QUI COMPTENT",
+    "title": "VOS AVIS",
+    "headline": "Un peu de reconnaissance fait beaucoup.",
+    "intro": "Chaque projet laisse une histoire. Survolez une lettre pour l’ouvrir ou touchez-la pour lire le message.",
+    "open": "SURVOLER POUR OUVRIR",
+    "opened": "LETTRE OUVERTE",
+    "paper": "UN MOT DE NOTRE PARCOURS",
+    "panel": "QUELQUES MOTS DE L’AUTRE CÔTÉ",
+    "disclaimer": "Ces commentaires sont des exemples illustratifs et non des avis clients vérifiés. Ils seront remplacés par des témoignages authentiques et approuvés avant publication.",
+    "letters": [
+      {
+        "service": "CONTENU IA",
+        "title": "Une toute nouvelle perspective",
+        "quote": "Orange a transformé une idée encore floue en un univers visuel qui incarnait parfaitement notre marque. La rapidité était impressionnante, mais le souci du détail a fait toute la différence.",
+        "name": "Maya Bennett",
+        "role": "Directrice de marque · Northstar Studio",
+        "initials": "MB",
+        "accent": "blue",
+        "mark": "✳"
+      },
+      {
+        "service": "PUBLICITÉS",
+        "title": "Une création qui attire le regard",
+        "quote": "L’équipe a compris les objectifs de nos publicités. Les concepts étaient frais, le message clair et nous avions enfin des variantes créatives pour faire évoluer la campagne.",
+        "name": "Ethan Cole",
+        "role": "Fondateur · Form & Field",
+        "initials": "EC",
+        "accent": "green",
+        "mark": "↗"
+      },
+      {
+        "service": "STUDIO UGC",
+        "title": "Un résultat profondément humain",
+        "quote": "Nous voulions un contenu qui ressemble à une vraie recommandation, pas à une publicité de plus. Orange a trouvé le bon équilibre avec des vidéos naturelles dès la première image.",
+        "name": "Sofia Rivera",
+        "role": "Responsable marketing · Sunday Supply",
+        "initials": "SR",
+        "accent": "teal",
+        "mark": "◉"
+      },
+      {
+        "service": "DESIGN WEB",
+        "title": "Notre meilleure première impression",
+        "quote": "Le nouveau site raconte enfin notre histoire comme nous l’avions imaginée. Chaque détail est réfléchi, l’expérience est fluide et notre marque paraît plus affirmée en ligne.",
+        "name": "Oliver Hayes",
+        "role": "Co-fondateur · Atelier One",
+        "initials": "OH",
+        "accent": "teal",
+        "mark": "⌘"
+      },
+      {
+        "service": "COLLABORATION",
+        "title": "Une équipe qui nous comprend",
+        "quote": "De la première conversation à la livraison, tout a été attentif et collaboratif. L’équipe a écouté, proposé ses idées et fait de chaque échange un progrès.",
+        "name": "Amelia Brooks",
+        "role": "Directrice créative · Common Ground",
+        "initials": "AB",
+        "accent": "blue",
+        "mark": "✳"
+      },
+      {
+        "service": "RÉSULTAT",
+        "title": "Bien plus que prévu",
+        "quote": "Ce qui nous a marqués, c’est la cohérence de l’ensemble. Le travail nous a apporté un récit plus clair, une présence renforcée et la confiance nécessaire pour avancer.",
+        "name": "Noah Williams",
+        "role": "Propriétaire · The Good Habit",
+        "initials": "NW",
+        "accent": "green",
+        "mark": "↗"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "06 / BON À SAVOIR",
+    "title1": "Des questions ?",
+    "title2": "Nous avons les réponses.",
+    "intro": "Quelques points que vous aimeriez peut-être connaître avant de commencer.",
+    "items": [
+      [
+        "Quels contenus Orange AI peut-il créer ?",
+        "De l’image produit générée par IA aux vidéos courtes, en passant par l’UGC, les publicités payantes et les expériences web complètes. Parlez-nous du format souhaité."
+      ],
+      [
+        "Dois-je avoir un brief précis ?",
+        "Pas du tout. Un produit, un objectif ou même une première idée suffisent. Nous pouvons définir la direction et recommander les livrables adaptés."
+      ],
+      [
+        "Combien de temps dure un projet ?",
+        "Tout dépend du périmètre et des livrables. Après étude de votre brief, nous vous proposerons un calendrier réaliste avant de commencer."
+      ],
+      [
+        "Puis-je demander des modifications ?",
+        "Oui. Chaque projet comprend une étape de révision pour aligner le résultat sur votre vision. Le périmètre exact est défini dans la proposition."
+      ],
+      [
+        "Comment obtenir un devis ?",
+        "Utilisez le formulaire ci-dessous pour nous présenter votre besoin. Nous étudierons les détails et reviendrons vers vous avec les prochaines étapes."
+      ]
+    ]
+  },
+  "contact": {
+    "eyebrow": "07 / VOTRE PROCHAINE ÉTAPE",
+    "overline": "CRÉONS QUELQUE CHOSE QUI COMPTE",
+    "title1": "Vous avez un",
+    "title2": "bon pressentiment",
+    "title3": "?",
+    "copy": "Parlez-nous de votre projet. Nous apporterons les idées, les outils et un plan pour le concrétiser.",
+    "trust": "UNE BONNE IDÉE COMMENCE PAR UNE CONVERSATION",
+    "formStep": "DEMANDE DE PROJET · 01",
+    "formTitle": "Parlons des détails.",
+    "progress": "AVANCEMENT DE VOTRE DEMANDE",
+    "name": "Votre nom",
+    "namePlaceholder": "Comment devons-nous vous appeler ?",
+    "email": "Adresse e-mail",
+    "emailPlaceholder": "vous@entreprise.com",
+    "serviceLegend": "De quoi avez-vous besoin ?",
+    "serviceHint": "CHOISISSEZ LE SERVICE ADAPTÉ À VOTRE IDÉE",
+    "selected": "SÉLECTIONNÉ",
+    "message": "Parlez-nous un peu du projet",
+    "messagePlaceholder": "Quelques mots sur votre projet...",
+    "submit": "Envoyer votre demande",
+    "note": "En envoyant ce message, vous faites le premier pas. Nous prenons le relais.",
+    "steps": [
+      "VOTRE NOM",
+      "E-MAIL",
+      "SERVICE",
+      "DÉTAILS"
+    ],
+    "services": [
+      {
+        "name": "Contenu IA",
+        "detail": "Visuels, concepts et campagnes",
+        "icon": "✳"
+      },
+      {
+        "name": "Publicités",
+        "detail": "Création axée performance",
+        "icon": "↗"
+      },
+      {
+        "name": "Studio UGC",
+        "detail": "Contenu inspiré des créateurs",
+        "icon": "◉"
+      },
+      {
+        "name": "Design web",
+        "detail": "Expériences numériques",
+        "icon": "⌘"
+      },
+      {
+        "name": "Autre besoin",
+        "detail": "Quelque chose de différent",
+        "icon": "＋"
+      }
+    ]
+  },
+  "footer": {
+    "eyebrow": "UNE BONNE IDÉE EN TÊTE ?",
+    "title1": "FAISONS",
+    "title2": "LA DIFFÉRENCE.",
+    "cta": "PARLEZ-NOUS DE VOTRE PROJET",
+    "brand": "Des idées qui ont du caractère.",
+    "brand2": "Pensées pour demain.",
+    "explore": "EXPLORER",
+    "links": [
+      "Services",
+      "Projets choisis",
+      "Notre approche",
+      "FAQ",
+      "Démarrer un projet"
+    ],
+    "connect": "LES BONNES CHOSES COMMENCENT ICI",
+    "location": "INDÉPENDANTS PAR NATURE. CRÉATIFS PAR CONCEPTION.",
+    "copyright": "ORANGE AI STUDIO. TOUS DROITS RÉSERVÉS.",
+    "bottom": "PENSÉ POUR DEMAIN",
+    "back": "RETOUR EN HAUT"
+  }
+}
