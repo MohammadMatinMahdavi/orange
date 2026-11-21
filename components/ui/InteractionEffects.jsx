@@ -14,17 +14,17 @@ export default function InteractionEffects() {
       frame = requestAnimationFrame(() => {
         const y = window.scrollY;
 
-        // First orange passage: fade in, hold briefly, then return to dark.
+        // First blue-green passage: fade in, hold briefly, then return to dark.
         const firstIn = clamp(y, 180, 900);
         const firstOut = clamp(y, 1500, 2250);
         const firstBand = firstIn * (1 - firstOut);
 
-        // Second orange passage further down the page.
+        // Second blue-green passage further down the page.
         const secondIn = clamp(y, 2350, 3100);
         const secondOut = clamp(y, 3950, 4750);
         const secondBand = secondIn * (1 - secondOut);
 
-        root.style.setProperty("--scroll-orange", Math.max(firstBand, secondBand).toFixed(3));
+        root.style.setProperty("--scroll-aura", Math.max(firstBand, secondBand).toFixed(3));
       });
     };
 
@@ -36,7 +36,7 @@ export default function InteractionEffects() {
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", updateScrollAtmosphere);
       window.removeEventListener("resize", updateScrollAtmosphere);
-      root.style.removeProperty("--scroll-orange");
+      root.style.removeProperty("--scroll-aura");
     };
   }, []);
 
