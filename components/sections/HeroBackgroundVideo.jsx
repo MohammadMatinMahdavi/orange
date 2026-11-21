@@ -45,7 +45,6 @@ export default function HeroBackgroundVideo() {
         className="hero-background-video-media"
         src={VIDEO_SRC}
         muted
-        defaultMuted
         loop
         autoPlay
         playsInline
