@@ -1964,3 +1964,99 @@ body::before {
   .feedback-card-watermark { transition: none !important; }
   .feedback-card:hover { transform: none; }
 }
+
+
+/* Contact refresh: staggered inquiry card and more readable controls. */
+@media (min-width: 901px) {
+  .contact-layout {
+    grid-template-columns: minmax(0, .88fr) minmax(0, 1.02fr);
+    column-gap: clamp(28px, 4vw, 60px);
+    align-items: start;
+  }
+  .contact-form {
+    margin-top: clamp(76px, 8vw, 108px);
+    padding: clamp(27px, 2.8vw, 38px);
+    gap: 17px;
+  }
+  .contact-section {
+    padding-bottom: clamp(145px, 14vw, 190px);
+  }
+}
+
+.contact-form label {
+  font-size: 12px;
+  line-height: 1.45;
+  gap: 8px;
+}
+.contact-form input,
+.contact-form textarea {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 12px 14px;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-size: 13px;
+}
+.form-card-heading h3 {
+  font-size: clamp(27px, 2.6vw, 34px);
+}
+.inquiry-progress-meta { font-size: 9px; }
+.inquiry-progress-steps span { font-size: 8px; }
+.service-picker legend {
+  font-size: 12px;
+  margin-bottom: 11px;
+}
+.contact-form .service-choice {
+  min-height: 78px;
+  padding: 12px 30px 12px 13px;
+  gap: 12px;
+}
+.service-choice-icon {
+  flex-basis: 36px;
+  width: 36px;
+  height: 36px;
+  font-size: 17px;
+}
+.service-choice-copy b { font-size: 13px; }
+.service-choice-copy small {
+  margin-top: 4px;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.service-choice-code { font-size: 9px; }
+.service-choice-check { font-size: 13px; }
+.service-picker-hint {
+  margin-top: 10px;
+  font-size: 9px;
+}
+.contact-form .form-submit {
+  padding: 16px 19px;
+  font-size: 13px;
+}
+.form-note { font-size: 10px; }
+
+@media (max-width: 900px) and (min-width: 641px) {
+  .contact-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
+  .contact-form { margin-top: 48px; }
+  .contact-section { padding-bottom: 125px; }
+  .contact-form .service-choice { min-height: 76px; }
+}
+@media (max-width: 640px) {
+  .contact-form { margin-top: 0; padding: 24px 19px; gap: 17px; }
+  .contact-form label { font-size: 12px; }
+  .contact-form input,
+  .contact-form textarea { font-size: 14px; padding: 12px 13px; }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder { font-size: 13px; }
+  .form-card-heading h3 { font-size: 27px; }
+  .service-picker legend { font-size: 12px; }
+  .contact-form .service-choice {
+    min-height: 82px;
+    padding: 13px 31px 13px 13px;
+  }
+  .service-choice-copy b { font-size: 13px; }
+  .service-choice-copy small { font-size: 10px; }
+  .service-picker-hint { font-size: 9px; }
+  .inquiry-progress-steps span { font-size: 7px; }
+}
