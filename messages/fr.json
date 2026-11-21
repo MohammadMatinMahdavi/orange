@@ -15,7 +15,9 @@
     "start": "Démarrer un projet",
     "home": "Accueil Orange AI",
     "choose": "Choisir la langue",
-    "languageLabel": "LANGUE / LANGUAGE / IDIOMA"
+    "languageLabel": "LANGUE / LANGUAGE / IDIOMA",
+    "closeNav": "Fermer la navigation",
+    "openNav": "Ouvrir la navigation"
   },
   "hero": {
     "kicker": "LE STUDIO CRÉATIF RÉINVENTÉ",
@@ -115,7 +117,8 @@
         "icon": "⌘"
       }
     ],
-    "link": "Découvrir le service"
+    "link": "Découvrir le service",
+    "serviceLabel": "SERVICE"
   },
   "portfolio": {
     "eyebrow": "02 / PROJETS CHOISIS",
@@ -154,7 +157,8 @@
     "soundOff": "SON COUPÉ",
     "soundOn": "SON ACTIVÉ",
     "soundEnable": "Activer le son de la vidéo",
-    "soundMute": "Couper le son de la vidéo"
+    "soundMute": "Couper le son de la vidéo",
+    "projectPreview": "aperçu du projet"
   },
   "manifesto": {
     "eyebrow": "03 / NOTRE VISION",
@@ -259,7 +263,9 @@
         "accent": "green",
         "mark": "↗"
       }
-    ]
+    ],
+    "letterLabel": "LETTRE",
+    "paperSign": "AVEC RECONNAISSANCE"
   },
   "faq": {
     "eyebrow": "06 / BON À SAVOIR",
@@ -364,6 +370,7 @@
     "location": "INDÉPENDANTS PAR NATURE. CRÉATIFS PAR CONCEPTION.",
     "copyright": "ORANGE AI STUDIO. TOUS DROITS RÉSERVÉS.",
     "bottom": "PENSÉ POUR DEMAIN",
-    "back": "RETOUR EN HAUT"
+    "back": "RETOUR EN HAUT",
+    "homeLabel": "Orange AI — retour en haut"
   }
 }
