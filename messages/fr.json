@@ -17,7 +17,13 @@
     "choose": "Choisir la langue",
     "languageLabel": "LANGUE / LANGUAGE / IDIOMA",
     "closeNav": "Fermer la navigation",
-    "openNav": "Ouvrir la navigation"
+    "openNav": "Ouvrir la navigation",
+    "themeChoose": "Choisir le thème du site",
+    "themeLabel": "THÈME DE COULEUR",
+    "themeBlue": "Bleu nuit",
+    "themeOrange": "Éclat orange",
+    "themeBlueShort": "BLEU",
+    "themeOrangeShort": "ORANGE"
   },
   "hero": {
     "kicker": "LE STUDIO CRÉATIF RÉINVENTÉ",
