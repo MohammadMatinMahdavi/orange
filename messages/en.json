@@ -17,7 +17,13 @@
     "choose": "Choose language",
     "languageLabel": "LANGUAGE / IDIOMA / LANGUE",
     "closeNav": "Close navigation",
-    "openNav": "Open navigation"
+    "openNav": "Open navigation",
+    "themeChoose": "Choose site theme",
+    "themeLabel": "COLOR THEME",
+    "themeBlue": "Midnight Blue",
+    "themeOrange": "Orange Glow",
+    "themeBlueShort": "BLUE",
+    "themeOrangeShort": "ORANGE"
   },
   "hero": {
     "kicker": "CREATIVE STUDIO, REIMAGINED",
