@@ -48,7 +48,7 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState(0);
 
   return (
-    <main>
+    <main id="top">
       <InteractionEffects />
       <AnnouncementBar />
       <SiteHeader />
