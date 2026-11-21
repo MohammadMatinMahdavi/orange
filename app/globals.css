@@ -2645,3 +2645,71 @@ html[data-theme="orange"] .feedback-status-dot{
     border-bottom-color:rgba(255,174,112,.2);
   }
 }
+
+/* Warm porcelain feedback cards for the orange theme. */
+html[data-theme="orange"] .feedback-section{
+  background:linear-gradient(180deg,#fffaf5 0%,#fff7ef 52%,#fffaf6 100%);
+  border-top-color:rgba(190,111,62,.18);
+  border-bottom-color:rgba(190,111,62,.18);
+  color:#382419;
+}
+html[data-theme="orange"] .feedback-section .eyebrow,
+html[data-theme="orange"] .feedback-section .eyebrow span{
+  color:#b86c3d;
+}
+html[data-theme="orange"] .feedback-heading h2{
+  color:#3b281e;
+}
+html[data-theme="orange"] .feedback-heading h2 span{
+  color:#d9773c;
+}
+html[data-theme="orange"] .feedback-intro-copy p{
+  color:#806b5e;
+}
+html[data-theme="orange"] .feedback-intro-copy .feedback-headline{
+  color:#493226;
+}
+html[data-theme="orange"] .letter-card{
+  border-color:rgba(173,112,75,.2);
+  background:linear-gradient(145deg,#fffefa 0%,#fff8f1 58%,#fffdf9 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.98),0 14px 32px rgba(94,53,27,.09);
+}
+html[data-theme="orange"] .letter-card:hover,
+html[data-theme="orange"] .letter-card:focus-within,
+html[data-theme="orange"] .letter-card.is-open{
+  border-color:rgba(211,128,75,.42);
+  box-shadow:inset 0 1px 0 #fff,0 22px 44px rgba(110,61,31,.13);
+}
+html[data-theme="orange"] .letter-index{color:#9b765f}
+html[data-theme="orange"] .letter-index i{color:#c4a995}
+html[data-theme="orange"] .letter-plate{
+  background:radial-gradient(ellipse at 36% 25%,#fff 0%,#fffefa 43%,#f4e9df 82%,#e8d8ca 100%);
+  box-shadow:0 17px 22px rgba(90,55,33,.16),inset 0 3px 8px rgba(255,255,255,.98),inset 0 -8px 14px rgba(137,91,61,.1);
+}
+html[data-theme="orange"] .letter-plate-rim{
+  border-color:rgba(190,145,113,.32);
+  box-shadow:inset 0 2px 5px rgba(255,255,255,.95);
+}
+html[data-theme="orange"] .letter-plate-center{border-color:rgba(190,145,113,.2)}
+html[data-theme="orange"] .letter-plate-glint{background:rgba(255,255,255,.82)}
+html[data-theme="orange"] .letter-card-meta{color:#7d5b47}
+html[data-theme="orange"] .letter-service{color:#9c5b34}
+html[data-theme="orange"] .letter-open-hint{color:#9c806d}
+html[data-theme="orange"] .letter-open-hint b{color:#d9773c}
+html[data-theme="orange"] .letter-glass-panel{
+  border-color:rgba(190,129,87,.24);
+  background:linear-gradient(145deg,rgba(255,255,252,.98),rgba(255,245,235,.98));
+  box-shadow:0 18px 40px rgba(87,48,26,.14),inset 0 1px 0 rgba(255,255,255,.98);
+  color:#4a3022;
+}
+html[data-theme="orange"] .letter-glass-kicker{color:#b16b43}
+html[data-theme="orange"] .letter-review-quote{color:#493226}
+html[data-theme="orange"] .letter-review-byline b{color:#4b3021}
+html[data-theme="orange"] .letter-review-byline i{color:#96745f}
+html[data-theme="orange"] .letter-review-avatar{
+  color:#a9572d;
+  border-color:rgba(194,119,72,.36);
+  background:#fff0e3;
+}
+html[data-theme="orange"] .feedback-disclaimer{color:#9a7b67}
+
