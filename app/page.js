@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import SiteHeader from "@/components/layout/SiteHeader";
 import ServicesTicker from "@/components/sections/ServicesTicker";
@@ -44,14 +44,19 @@ const faqs = [
   ["How do I get a quote?", "Use the inquiry form below to tell us what you’re looking for. We’ll review the details and get back to you with next steps."],
 ];
 
-export default function Home() {
+export default function Home({ locale = "en" }) {
   const [openFaq, setOpenFaq] = useState(0);
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+    document.documentElement.dir = "ltr";
+  }, [locale]);
 
   return (
     <main id="top">
       <InteractionEffects />
       <AnnouncementBar />
-      <SiteHeader />
+      <SiteHeader locale={locale} />
 
       <HeroSection />
       <ServicesTicker />
