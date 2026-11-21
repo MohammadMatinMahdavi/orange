@@ -45,7 +45,7 @@ function ThemeSwitcher({ t }) {
 
   return <div className="theme-switcher">
     <button type="button" className={`theme-trigger ${open ? "theme-trigger-open" : ""}`} onClick={() => setOpen((value) => !value)} aria-label={t.themeChoose} aria-expanded={open} aria-haspopup="true">
-      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42" /><circle cx="12" cy="12" r="4" /></svg>
+      {theme === "orange" ? <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42m0-14.14-1.42 1.42m-11.3 11.3-1.42 1.42" /></svg> : <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z" /></svg>}
       <span>{theme === "orange" ? t.themeOrangeShort : t.themeBlueShort}</span><i aria-hidden="true">⌄</i>
     </button>
     {open && <div className="theme-menu" role="menu" aria-label={t.themeChoose}>
