@@ -37,7 +37,7 @@ export default function ContactSection() {
           <div className="contact-trust-note"><span className="contact-pulse" /> A GOOD IDEA STARTS WITH A CONVERSATION</div>
         </div>
 
-        <form className="contact-form relative rounded-2xl border border-white/10 bg-[#171411]/90 p-6 shadow-2xl shadow-orange-950/30 backdrop-blur-xl sm:p-8" action="mailto:hello@orangeai.studio" method="post" encType="text/plain">
+        <form className="contact-form relative rounded-2xl border border-white/10 bg-[#10171a]/90 p-6 shadow-2xl shadow-sky-950/30 backdrop-blur-xl sm:p-8" action="mailto:hello@orangeai.studio" method="post" encType="text/plain">
           <div className="form-card-heading">
             <div><span className="form-step">PROJECT INQUIRY · 01</span><h3>Let’s talk details.</h3></div>
             <span className="form-spark" aria-hidden="true">✳</span>
@@ -74,7 +74,7 @@ export default function ContactSection() {
           </fieldset>
 
           <label>Tell us a little about it<textarea name="message" rows="3" value={message} onChange={(event) => setMessage(event.target.value)} placeholder="A few words about your project..." /></label>
-          <button className="button button-primary form-submit group w-full justify-between rounded-lg shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-1 hover:shadow-orange-500/30" type="submit">Send your inquiry <Arrow /></button>
+          <button className="button button-primary form-submit group w-full justify-between rounded-lg shadow-lg shadow-sky-500/20 transition-all hover:-translate-y-1 hover:shadow-emerald-500/30" type="submit">Send your inquiry <Arrow /></button>
           <span className="form-note">By sending this, you’re taking the first step. We’ll take it from here.</span>
         </form>
       </div>
