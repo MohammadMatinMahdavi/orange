@@ -1620,3 +1620,17 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   .hero-background-video-media { display: none; }
 }
+
+
+/* Keep only actual hero copy above the video; preserve the glow's absolute positioning. */
+.hero > .hero-kicker,
+.hero > h1,
+.hero > .hero-bottom,
+.hero > .hero-foot {
+  position: relative;
+  z-index: 1;
+}
+.hero > .hero-glow {
+  position: absolute;
+  z-index: 0;
+}
