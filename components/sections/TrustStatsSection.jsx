@@ -8,7 +8,7 @@ export default function TrustStatsSection() {
     <section className="trust-section" id="impact" aria-labelledby="trust-heading">
       <div className="trust-heading">
         <div>
-          <div className="eyebrow"><span>01</span> / PROOF, NOT PROMISES</div>
+          <div className="eyebrow"><span>TRUST</span> / PROOF, NOT PROMISES</div>
           <h2 id="trust-heading">Built on trust.<br /><span>Measured by impact.</span></h2>
         </div>
         <p>Good creative work starts with a relationship — and earns its value through what gets delivered.</p>
