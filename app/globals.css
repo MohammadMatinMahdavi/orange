@@ -2399,3 +2399,12 @@ body::before {
   .letter-envelope-glint, .letter-reveal, .letter-reveal-inner { transition: none !important; }
   .letter-card:hover, .letter-card:focus-within { transform: none; }
 }
+
+
+/* Letter testimonial attribution and readable sample quote. */
+.letter-review-quote { color: #a9bbc0 !important; font-family: Georgia,serif; font-size: 13px !important; line-height: 1.75 !important; }
+.letter-review-person { display: flex; align-items: center; gap: 10px; margin-top: 15px; }
+.letter-review-avatar { display: grid; width: 32px; height: 32px; flex: 0 0 32px; place-items: center; border: 1px solid color-mix(in srgb,var(--letter-accent) 45%,transparent); border-radius: 50%; color: var(--letter-accent); background: color-mix(in srgb,var(--letter-accent) 10%,#102029); font-size: 9px; font-weight: 800; letter-spacing: .04em; }
+.letter-review-byline { display: flex; min-width: 0; flex-direction: column; gap: 3px; }
+.letter-review-byline b { color: #e7f4f6; font-size: 10px; font-weight: 650; }
+.letter-review-byline i { color: #82989e; font-size: 8px; font-style: normal; line-height: 1.4; }
