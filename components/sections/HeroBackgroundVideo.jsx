@@ -24,9 +24,7 @@ export default function HeroBackgroundVideo() {
 
       const playback = video.play();
       if (playback && typeof playback.catch === "function") {
-        playback.catch(() => {
-          // Keep the dark fallback visible if autoplay is blocked.
-        });
+        playback.catch(() => {});
       }
     };
 
@@ -49,7 +47,11 @@ export default function HeroBackgroundVideo() {
         muted
         defaultMuted
         loop
+        autoPlay
         playsInline
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload noplaybackrate noremoteplayback"
         preload="auto"
         tabIndex={-1}
       />
