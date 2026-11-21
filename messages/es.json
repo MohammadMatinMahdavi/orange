@@ -17,7 +17,13 @@
     "choose": "Elegir idioma",
     "languageLabel": "IDIOMA / LANGUAGE / LANGUE",
     "closeNav": "Cerrar navegación",
-    "openNav": "Abrir navegación"
+    "openNav": "Abrir navegación",
+    "themeChoose": "Elegir tema del sitio",
+    "themeLabel": "TEMA DE COLOR",
+    "themeBlue": "Azul medianoche",
+    "themeOrange": "Naranja brillante",
+    "themeBlueShort": "AZUL",
+    "themeOrangeShort": "NARANJA"
   },
   "hero": {
     "kicker": "ESTUDIO CREATIVO, REIMAGINADO",
