@@ -16,7 +16,7 @@ function ProjectVisual({ project, index, t }) {
     if (!nextMuted) video.play().catch(() => setMuted(true));
   };
   return <div className="project-peel"><div className="project-image" style={{ backgroundImage: `url('${project.image}')` }}>
-    {project.video && !videoFailed && <video ref={videoRef} className="project-video" src={project.video} poster={project.image} autoPlay muted loop playsInline preload="metadata" aria-label={`${project.title} project preview`} onError={() => setVideoFailed(true)} />}
+    {project.video && !videoFailed && <video ref={videoRef} className="project-video" src={project.video} poster={project.image} autoPlay muted loop playsInline preload="metadata" aria-label={`${project.title} — ${t.projectPreview}`} onError={() => setVideoFailed(true)} />}
     <span className="project-number">0{index + 1}</span><span className="project-open"><Arrow diagonal /></span><span className="project-image-caption">{t.frame}</span>
     {project.video && !videoFailed && <button type="button" className={`project-sound-toggle ${muted ? "is-muted" : "is-unmuted"}`} onClick={toggleSound} aria-label={muted ? t.soundEnable : t.soundMute} aria-pressed={!muted}><span aria-hidden="true">{muted ? "♪̸" : "♪"}</span><span>{muted ? t.soundOff : t.soundOn}</span></button>}
   </div></div>;
