@@ -2269,3 +2269,133 @@ body::before {
     border-radius: 23px;
   }
 }
+
+
+/* Hybrid letter archive — tactile paper, glass atmosphere and a 3D open interaction. */
+.feedback-intro-copy { max-width: 380px; }
+.feedback-intro-copy p { margin: 0; color: #91a5ab; font-size: 12px; line-height: 1.8; }
+.feedback-intro-copy .feedback-headline { margin-bottom: 8px; color: #eaf8fb; font-size: clamp(19px, 2.1vw, 26px); font-weight: 550; letter-spacing: -.045em; }
+.letter-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 19px; perspective: 1500px; }
+.letter-card {
+  --letter-accent: #66c8f5;
+  position: relative;
+  min-width: 0;
+  min-height: 300px;
+  padding: 17px 18px 15px;
+  overflow: hidden;
+  border: 1px solid rgba(154,205,220,.15);
+  border-radius: 20px;
+  background: linear-gradient(145deg,rgba(22,39,47,.82),rgba(10,19,25,.94));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 18px 48px rgba(0,0,0,.18);
+  transition: border-color .4s ease, background .4s ease, box-shadow .45s ease, transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.letter-card-green { --letter-accent: #76dfb0; }
+.letter-card-teal { --letter-accent: #62ddcf; }
+.letter-card:hover, .letter-card:focus-within {
+  z-index: 2;
+  transform: translateY(-7px) rotateX(1.5deg);
+  border-color: color-mix(in srgb,var(--letter-accent) 48%,rgba(255,255,255,.16));
+  box-shadow: 0 27px 65px rgba(0,0,0,.3), 0 0 34px color-mix(in srgb,var(--letter-accent) 10%,transparent), inset 0 1px 0 rgba(255,255,255,.09);
+}
+.letter-index { display: block; position: relative; z-index: 4; color: #8ca2a9; font-size: 8px; font-weight: 800; letter-spacing: .16em; }
+.letter-index i { color: #52676e; font-style: normal; }
+.letter-trigger { display: flex; width: 100%; min-height: 264px; flex-direction: column; align-items: stretch; padding: 0; border: 0; color: inherit; background: transparent; text-align: left; cursor: pointer; }
+.letter-envelope {
+  position: relative;
+  display: block;
+  width: min(100%, 300px);
+  height: 174px;
+  margin: 20px auto 13px;
+  perspective: 900px;
+  transform-style: preserve-3d;
+  transition: transform .65s cubic-bezier(.2,.8,.2,1);
+}
+.letter-card:hover .letter-envelope, .letter-card:focus-within .letter-envelope { transform: translateY(-3px) rotate(-1deg) scale(1.025); }
+.letter-envelope-back {
+  position: absolute; inset: 12px 0 0;
+  border: 1px solid rgba(255,255,255,.17);
+  border-radius: 8px;
+  background: linear-gradient(145deg,#dce9e8,#a8c5c7);
+  box-shadow: 0 15px 30px rgba(0,0,0,.25);
+}
+.letter-paper {
+  position: absolute; z-index: 1; left: 9%; right: 9%; top: 2px; height: 145px;
+  display: flex; flex-direction: column; align-items: flex-start; padding: 17px 16px;
+  border: 1px solid rgba(255,255,255,.75); border-radius: 5px;
+  color: #233942; background: linear-gradient(145deg,#f4f6ef,#dce8e5);
+  box-shadow: 0 5px 18px rgba(0,0,0,.12);
+  transform: translateY(33px) scale(.94);
+  transition: transform .72s cubic-bezier(.16,1,.3,1), box-shadow .6s ease;
+}
+.letter-paper-kicker { color: #61818a; font-size: 6px; font-weight: 800; letter-spacing: .16em; }
+.letter-paper-title { max-width: 190px; margin-top: 12px; font-family: Georgia,serif; font-size: 17px; line-height: 1.05; letter-spacing: -.04em; }
+.letter-paper-lines { display: grid; gap: 5px; width: 72%; margin-top: 12px; }
+.letter-paper-lines i { height: 1px; background: rgba(49,83,91,.2); }
+.letter-paper-lines i:last-child { width: 65%; }
+.letter-paper-sign { margin-top: auto; color: #6a8589; font-size: 5px; letter-spacing: .16em; }
+.letter-envelope-front {
+  position: absolute; z-index: 2; inset: 12px 0 0;
+  border: 1px solid rgba(255,255,255,.22); border-radius: 8px;
+  background: linear-gradient(145deg,#a9c6c8,#6f969e);
+  clip-path: polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);
+  box-shadow: inset 0 -15px 25px rgba(27,66,75,.18);
+}
+.letter-envelope-flap {
+  position: absolute; z-index: 3; inset: 12px 0 auto; height: 88px;
+  border: 1px solid rgba(255,255,255,.24); border-radius: 8px 8px 0 0;
+  background: linear-gradient(155deg,#dce9e8,#9cbcc0);
+  clip-path: polygon(0 0,100% 0,50% 100%);
+  transform-origin: 50% 0;
+  backface-visibility: hidden;
+  transition: transform .62s cubic-bezier(.2,.8,.2,1), filter .5s ease;
+}
+.letter-seal {
+  position: absolute; z-index: 4; left: 50%; top: 82px; display: grid; width: 35px; height: 35px;
+  place-items: center; border: 1px solid rgba(255,255,255,.48); border-radius: 50%;
+  color: #e9fff8; background: radial-gradient(circle at 35% 28%,color-mix(in srgb,var(--letter-accent) 85%,white),color-mix(in srgb,var(--letter-accent) 55%,#173c4b) 72%);
+  box-shadow: 0 4px 13px rgba(0,0,0,.3), inset 0 1px 3px rgba(255,255,255,.45);
+  font-family: Georgia,serif; font-size: 16px;
+  transform: translateX(-50%);
+  transition: transform .4s ease, opacity .25s ease, box-shadow .4s ease;
+}
+.letter-envelope-glint { position: absolute; z-index: 5; inset: 12px 0 0; border-radius: 8px; pointer-events: none; background: linear-gradient(115deg,transparent 25%,rgba(255,255,255,.23) 48%,transparent 67%); opacity: .36; transform: translateX(-120%); transition: transform .9s ease; }
+.letter-card:hover .letter-envelope-glint { transform: translateX(120%); }
+.letter-card-meta { position: relative; z-index: 4; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.08); }
+.letter-service { color: var(--letter-accent); font-size: 8px; font-weight: 800; letter-spacing: .15em; }
+.letter-open-hint { color: #7e969d; font-size: 7px; font-weight: 800; letter-spacing: .12em; white-space: nowrap; }
+.letter-open-hint b { margin-left: 7px; color: var(--letter-accent); font-size: 13px; }
+.letter-reveal { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .65s cubic-bezier(.2,.8,.2,1), opacity .4s ease; }
+.letter-reveal-inner { min-height: 0; overflow: hidden; padding: 0 2px; transform: translateY(-9px); transition: transform .65s cubic-bezier(.2,.8,.2,1), padding .65s ease; }
+.letter-reveal-label { color: var(--letter-accent); font-size: 7px; font-weight: 800; letter-spacing: .15em; }
+.letter-reveal h3 { margin: 8px 0 6px; color: #eaf8fb; font-size: 18px; font-weight: 550; letter-spacing: -.04em; }
+.letter-reveal p { margin: 0; color: #9eb0b5; font-size: 11px; line-height: 1.75; }
+.letter-reveal-stamp { display: inline-block; margin-top: 13px; padding: 5px 8px; border: 1px solid color-mix(in srgb,var(--letter-accent) 25%,transparent); border-radius: 99px; color: #8ea6ac; font-size: 6px; font-weight: 800; letter-spacing: .13em; }
+.letter-card.is-open { background: linear-gradient(145deg,rgba(25,48,57,.97),rgba(11,21,27,.98)); }
+.letter-card.is-open .letter-envelope-flap { z-index: 0; transform: rotateX(178deg); filter: brightness(.8); }
+.letter-card.is-open .letter-paper { z-index: 3; transform: translateY(-7px) scale(1); box-shadow: 0 13px 28px rgba(0,0,0,.25); }
+.letter-card.is-open .letter-seal { opacity: 0; transform: translate(-50%,-10px) scale(.5) rotate(35deg); }
+.letter-card.is-open .letter-reveal { grid-template-rows: 1fr; opacity: 1; }
+.letter-card.is-open .letter-reveal-inner { padding: 17px 2px 3px; transform: translateY(0); }
+.letter-trigger:focus-visible { outline: 2px solid var(--letter-accent); outline-offset: 5px; border-radius: 10px; }
+@media (max-width: 900px) {
+  .feedback-section { padding-left: 5%; padding-right: 5%; }
+  .letter-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+  .letter-card { min-height: 286px; }
+  .letter-envelope { height: 158px; }
+  .letter-trigger { min-height: 248px; }
+}
+@media (max-width: 640px) {
+  .feedback-section { padding: 78px 6%; }
+  .feedback-heading { display: block; margin-bottom: 29px; }
+  .feedback-heading h2 { font-size: 52px; }
+  .feedback-intro-copy { margin-top: 18px; }
+  .letter-grid { grid-template-columns: 1fr; gap: 12px; }
+  .letter-card { min-height: 265px; padding: 16px 17px 14px; }
+  .letter-trigger { min-height: 235px; }
+  .letter-envelope { width: min(100%,310px); height: 150px; margin-top: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .letter-card, .letter-envelope, .letter-paper, .letter-envelope-flap, .letter-seal,
+  .letter-envelope-glint, .letter-reveal, .letter-reveal-inner { transition: none !important; }
+  .letter-card:hover, .letter-card:focus-within { transform: none; }
+}
