@@ -1634,3 +1634,34 @@ body::before {
   position: absolute;
   z-index: 0;
 }
+
+
+/* More transparent glass header: let the hero artwork show through. */
+.site-header {
+  background: rgba(13, 12, 11, .16) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(135%);
+  backdrop-filter: blur(10px) saturate(135%);
+  border-bottom-color: rgba(255,255,255,.055);
+  box-shadow: 0 6px 24px rgba(0,0,0,.035), inset 0 1px 0 rgba(255,255,255,.035);
+}
+.site-header-scrolled {
+  background: rgba(13, 12, 11, .28) !important;
+  border-bottom-color: rgba(255,145,96,.11);
+  box-shadow: 0 9px 28px rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.045);
+}
+
+/* Break the hero video out of the centered content container edge-to-edge. */
+.hero-background-video {
+  left: 50%;
+  right: auto;
+  width: 100vw;
+  max-width: 100vw;
+  transform: translateX(-50%);
+}
+.hero-background-video-media::-webkit-media-controls,
+.hero-background-video-media::-webkit-media-controls-enclosure,
+.hero-background-video-media::-webkit-media-controls-panel,
+.hero-background-video-media::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
