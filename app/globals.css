@@ -2999,3 +2999,14 @@ html[data-theme="orange"] .feedback-disclaimer{color:#9a7b67}
   .motion-ready .project-card.motion-reveal.is-visible:hover,
   .motion-ready .trust-stat.motion-reveal.is-visible:hover{transform:translate3d(0,-3px,0)}
 }
+
+@media(prefers-reduced-motion:no-preference) and (pointer:fine){
+  .motion-ready .service-card.motion-reveal.is-visible.motion-tilt:hover{
+    transform:perspective(900px) rotateX(var(--tilt-y,0deg)) rotateY(var(--tilt-x,0deg)) translate3d(0,-8px,0);
+    transform-style:preserve-3d;
+  }
+  .motion-ready .project-card.motion-reveal.is-visible.motion-tilt:hover{
+    transform:perspective(1100px) rotateX(var(--tilt-y,0deg)) rotateY(var(--tilt-x,0deg)) translate3d(0,-5px,0) scale(1);
+    transform-style:preserve-3d;
+  }
+}
