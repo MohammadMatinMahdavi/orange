@@ -137,7 +137,6 @@
         "title": "Objects of desire.",
         "type": "Product visuals",
         "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-featured",
         "video": "/videos/project-01.mp4"
       },
       {
@@ -145,7 +144,6 @@
         "title": "Made to move.",
         "type": "Performance creative",
         "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-side",
         "video": "/videos/project-02.mp4"
       },
       {
@@ -153,32 +151,7 @@
         "title": "A better first click.",
         "type": "Web design",
         "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-side",
         "video": "/videos/project-03.mp4"
-      },
-      {
-        "category": "AI FILM",
-        "title": "A new point of view.",
-        "type": "Visual storytelling",
-        "image": "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-wide",
-        "video": "/videos/project-04.mp4"
-      },
-      {
-        "category": "PRODUCT STORY",
-        "title": "Details in motion.",
-        "type": "Product film",
-        "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-wide",
-        "video": "/videos/project-05.mp4"
-      },
-      {
-        "category": "CREATIVE EXPERIMENT",
-        "title": "Beyond the expected.",
-        "type": "Motion concept",
-        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-wide",
-        "video": "/videos/project-06.mp4"
       }
     ],
     "note": "A CURATED PREVIEW",
