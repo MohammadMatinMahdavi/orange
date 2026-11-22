@@ -137,7 +137,6 @@
         "title": "Objets de désir.",
         "type": "Visuels produit",
         "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-featured",
         "video": "/videos/project-01.mp4"
       },
       {
@@ -145,7 +144,6 @@
         "title": "Fait pour bouger.",
         "type": "Création performance",
         "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-side",
         "video": "/videos/project-02.mp4"
       },
       {
@@ -153,32 +151,7 @@
         "title": "Un meilleur premier clic.",
         "type": "Design web",
         "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-side",
         "video": "/videos/project-03.mp4"
-      },
-      {
-        "category": "FILM IA",
-        "title": "Un autre regard.",
-        "type": "Narration visuelle",
-        "image": "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-wide",
-        "video": "/videos/project-04.mp4"
-      },
-      {
-        "category": "RÉCIT PRODUIT",
-        "title": "Le détail en mouvement.",
-        "type": "Film produit",
-        "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-wide",
-        "video": "/videos/project-05.mp4"
-      },
-      {
-        "category": "EXPÉRIMENTATION CRÉATIVE",
-        "title": "Au-delà des attentes.",
-        "type": "Concept animé",
-        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=85",
-        "className": "project-wide",
-        "video": "/videos/project-06.mp4"
       }
     ],
     "note": "UNE SÉLECTION SOIGNÉE",
