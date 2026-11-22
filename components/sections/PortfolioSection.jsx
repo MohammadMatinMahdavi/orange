@@ -12,7 +12,6 @@ function ProjectVisual({ project, index, t }) {
     const video = videoRef.current;
     if (!video || !project.video) return;
 
-    let isVisible = false;
     let hasLoaded = false;
 
     const loadAndPlay = () => {
@@ -33,7 +32,6 @@ function ProjectVisual({ project, index, t }) {
     }
 
     const observer = new IntersectionObserver(([entry]) => {
-      isVisible = entry.isIntersecting;
       if (isVisible) {
         loadAndPlay();
       } else {
