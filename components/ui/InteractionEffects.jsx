@@ -59,6 +59,33 @@ export default function InteractionEffects() {
       }
     }
 
+    const tiltCleanups = [];
+    if (!motionPreference.matches && window.matchMedia("(pointer:fine)").matches) {
+      document.querySelectorAll(".service-card, .project-card").forEach((card) => {
+        card.classList.add("motion-tilt");
+        const handlePointerMove = (event) => {
+          const bounds = card.getBoundingClientRect();
+          const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+          const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+          card.style.setProperty("--tilt-x", `${(x * 7).toFixed(2)}deg`);
+          card.style.setProperty("--tilt-y", `${(y * -7).toFixed(2)}deg`);
+        };
+        const resetTilt = () => {
+          card.style.setProperty("--tilt-x", "0deg");
+          card.style.setProperty("--tilt-y", "0deg");
+        };
+        card.addEventListener("pointermove", handlePointerMove, { passive: true });
+        card.addEventListener("pointerleave", resetTilt);
+        tiltCleanups.push(() => {
+          card.removeEventListener("pointermove", handlePointerMove);
+          card.removeEventListener("pointerleave", resetTilt);
+          card.classList.remove("motion-tilt");
+          card.style.removeProperty("--tilt-x");
+          card.style.removeProperty("--tilt-y");
+        });
+      });
+    }
+
     updateScrollAtmosphere();
     window.addEventListener("scroll", updateScrollAtmosphere, { passive: true });
     window.addEventListener("resize", updateScrollAtmosphere);
@@ -66,6 +93,7 @@ export default function InteractionEffects() {
     return () => {
       cancelAnimationFrame(frame);
       revealObserver?.disconnect();
+      tiltCleanups.forEach((cleanup) => cleanup());
       root.classList.remove("motion-ready");
       window.removeEventListener("scroll", updateScrollAtmosphere);
       window.removeEventListener("resize", updateScrollAtmosphere);
