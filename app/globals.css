@@ -2988,3 +2988,14 @@ html[data-theme="orange"] .feedback-disclaimer{color:#9a7b67}
     animation:none!important
   }
 }
+
+@media(prefers-reduced-motion:no-preference){
+  .motion-ready .service-card.motion-reveal.is-visible:hover{transform:translate3d(0,-9px,0)}
+  .motion-ready .project-card.motion-reveal.is-visible:hover{transform:translate3d(0,-6px,0) scale(1)}
+  .motion-ready .trust-stat.motion-reveal.is-visible:hover{transform:translate3d(0,-7px,0)}
+}
+@media(max-width:700px) and (prefers-reduced-motion:no-preference){
+  .motion-ready .service-card.motion-reveal.is-visible:hover,
+  .motion-ready .project-card.motion-reveal.is-visible:hover,
+  .motion-ready .trust-stat.motion-reveal.is-visible:hover{transform:translate3d(0,-3px,0)}
+}
