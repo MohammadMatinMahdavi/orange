@@ -37,9 +37,9 @@ export default function Home({ locale = "en" }) {
       <SiteHeader locale={locale} t={t.header} />
       <HeroSection t={t.hero} />
       <ServicesTicker t={t.ticker} />
+      <PortfolioSection projects={t.portfolio.projects} t={t.portfolio} />
       <TrustStatsSection t={t.trust} />
       <ServicesSection services={t.services.cards} t={t.services} />
-      <PortfolioSection projects={t.portfolio.projects} t={t.portfolio} />
       <ManifestoSection t={t.manifesto} />
       <ProcessSection steps={t.process.steps} t={t.process} />
       <TestimonialSection t={t.testimonials} />
