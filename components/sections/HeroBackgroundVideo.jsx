@@ -51,7 +51,7 @@ export default function HeroBackgroundVideo() {
         controls={false}
         disablePictureInPicture
         controlsList="nodownload noplaybackrate noremoteplayback"
-        preload="auto"
+        preload="metadata"
         tabIndex={-1}
       />
       <div className="hero-background-video-overlay" />
