@@ -2881,3 +2881,110 @@ html[data-theme="orange"] .feedback-disclaimer{color:#9a7b67}
   .work-section .portfolio-reveal:nth-child(even){opacity:1;transform:none;transition:none}
   .work-section .project-peel{transition:none}
 }
+
+
+/* Orange AI motion system — lively details, restrained movement, accessible fallbacks */
+@media (prefers-reduced-motion:no-preference){
+  .hero-kicker{animation:orange-rise .75s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1{animation:orange-rise .9s .08s cubic-bezier(.2,.7,.2,1) both}
+  .hero-bottom{animation:orange-rise .85s .2s cubic-bezier(.2,.7,.2,1) both}
+  .hero-foot{animation:orange-rise .8s .32s cubic-bezier(.2,.7,.2,1) both}
+  .hero-glow{animation:orange-glow-drift 13s ease-in-out infinite alternate}
+  .hero-background-video-media{animation:orange-video-breathe 24s ease-in-out infinite alternate}
+  .art-core{animation:orange-core-float 7s ease-in-out infinite}
+  .art-orbit{animation:orange-orbit-drift 22s ease-in-out infinite alternate}
+  .orbit-two{animation:orange-orbit-drift-reverse 26s ease-in-out infinite alternate}
+  .manifesto-orb{animation:orange-glow-drift 16s ease-in-out infinite alternate}
+  .contact-glow{animation:orange-glow-drift 18s ease-in-out infinite alternate}
+  .status-dot,.contact-pulse{animation:orange-pulse 2.8s ease-in-out infinite}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+  .service-card,.project-card,.trust-stat,.process-item,.letter-card{transition:transform .55s cubic-bezier(.2,.7,.2,1),opacity .65s ease,background-color .3s}
+  .service-card:hover{transform:translateY(-9px)}
+  .project-card:hover{transform:translateY(-6px)}
+  .project-image{transition:transform .75s cubic-bezier(.2,.7,.2,1),filter .45s}
+  .project-card:hover .project-image{transform:translateY(-2px)}
+  .project-video{transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .5s}
+  .trust-stat:hover{transform:translateY(-7px)}
+  .process-item:hover .process-number{transform:translateX(5px)}
+  .process-number{transition:transform .3s}
+  .service-icon{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+  .service-card:hover .service-icon{transform:translateY(-4px) rotate(-9deg) scale(1.12)}
+  .button-primary,.nav-cta,.card-link,.text-link{transition:transform .25s ease,color .25s ease,background-color .25s ease,box-shadow .25s ease}
+  .button-primary:hover{transform:translateY(-3px);box-shadow:0 12px 32px color-mix(in srgb,var(--accent-primary) 24%,transparent)}
+  .nav-links a{position:relative}
+  .nav-links a:not(.mobile-nav-cta)::after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:1px;background:var(--accent-primary);transition:right .3s ease}
+  .nav-links a:hover::after{right:0}
+  .brand-mark{transition:transform .5s cubic-bezier(.2,.7,.2,1),background .3s}
+  .brand:hover .brand-mark{transform:rotate(90deg);background:color-mix(in srgb,var(--accent-primary) 12%,transparent)}
+  .letter-card:hover .letter-stage{transform:translateY(-5px)}
+  .letter-stage{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .faq-item button{transition:padding .25s ease,color .25s ease}
+  .faq-item button:hover{padding-left:12px;color:var(--accent-primary)}
+}
+@keyframes orange-rise{
+  from{opacity:0;transform:translate3d(0,22px,0)}
+  to{opacity:1;transform:translate3d(0,0,0)}
+}
+@keyframes orange-glow-drift{
+  0%{transform:translate3d(-2%,0,0) scale(.96)}
+  100%{transform:translate3d(3%,5%,0) scale(1.06)}
+}
+@keyframes orange-video-breathe{
+  from{transform:scale(1.015)}
+  to{transform:scale(1.07)}
+}
+@keyframes orange-core-float{
+  0%,100%{transform:translate(-50%,-50%) translateY(0)}
+  50%{transform:translate(-50%,-50%) translateY(-12px)}
+}
+@keyframes orange-orbit-drift{
+  from{transform:translate(-50%,-50%) rotate(-22deg)}
+  to{transform:translate(-50%,-50%) rotate(-8deg)}
+}
+@keyframes orange-orbit-drift-reverse{
+  from{transform:translate(-50%,-50%) rotate(48deg)}
+  to{transform:translate(-50%,-50%) rotate(31deg)}
+}
+@keyframes orange-pulse{
+  0%,100%{opacity:1;filter:brightness(1)}
+  50%{opacity:.55;filter:brightness(1.35)}
+}
+
+/* Scroll reveals are enabled only after the observer is ready; content stays visible without JS. */
+.motion-ready .motion-reveal{
+  opacity:0;
+  transform:translate3d(0,26px,0);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--reveal-delay,0ms);
+}
+.motion-ready .motion-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+.motion-ready .project-card.motion-reveal{transform:translate3d(0,30px,0) scale(.985)}
+.motion-ready .project-card.motion-reveal.is-visible{transform:translate3d(0,0,0) scale(1)}
+.motion-ready .service-card.motion-reveal{transform:translate3d(0,24px,0)}
+.motion-ready .service-card.motion-reveal.is-visible{transform:translate3d(0,0,0)}
+.motion-ready .letter-card.motion-reveal{transform:translate3d(0,22px,0) rotateX(2deg)}
+.motion-ready .letter-card.motion-reveal.is-visible{transform:translate3d(0,0,0) rotateX(0)}
+
+@media(max-width:700px){
+  @media(prefers-reduced-motion:no-preference){
+    .hero-background-video-media{animation:none}
+    .hero-glow,.manifesto-orb,.contact-glow{animation-duration:24s}
+    .service-card:hover,.project-card:hover,.trust-stat:hover{transform:translateY(-3px)}
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .motion-ready .motion-reveal,
+  .motion-ready .motion-reveal.is-visible,
+  .motion-ready .project-card.motion-reveal,
+  .motion-ready .project-card.motion-reveal.is-visible,
+  .motion-ready .service-card.motion-reveal,
+  .motion-ready .service-card.motion-reveal.is-visible,
+  .motion-ready .letter-card.motion-reveal,
+  .motion-ready .letter-card.motion-reveal.is-visible{
+    opacity:1!important;transform:none!important;transition:none!important
+  }
+  .hero-kicker,.hero h1,.hero-bottom,.hero-foot,.hero-glow,.hero-background-video-media,
+  .art-core,.art-orbit,.orbit-two,.manifesto-orb,.contact-glow,.status-dot,.contact-pulse{
+    animation:none!important
+  }
+}
