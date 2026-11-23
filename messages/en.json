@@ -352,7 +352,9 @@
         "detail": "A little different",
         "icon": "＋"
       }
-    ]
+    ],
+    "emailButton": "Continue by email",
+    "telegramButton": "Continue with Telegram"
   },
   "footer": {
     "eyebrow": "HAVE A GOOD ONE IN MIND?",
