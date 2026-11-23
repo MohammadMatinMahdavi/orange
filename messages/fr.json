@@ -352,7 +352,9 @@
         "detail": "Quelque chose de différent",
         "icon": "＋"
       }
-    ]
+    ],
+    "emailButton": "Continuer par e-mail",
+    "telegramButton": "Continuer avec Telegram"
   },
   "footer": {
     "eyebrow": "UNE BONNE IDÉE EN TÊTE ?",
